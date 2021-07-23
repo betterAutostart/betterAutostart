@@ -1,0 +1,12 @@
+{
+	"name": "Deutsch",
+	"active": 1,
+	"strings": {
+		"SETTINGS":"Einstellungen",
+		"CREATE_NEW_PROFILE":"Neues Profil Erstellen",
+		"EDIT_PROFILE":"Profil Bearbeiten",
+		"LANGUAGE":"Sprache",
+		"SAVE_SETTINGS":"Speichern",
+		"SAVE_SETTINGS_AND_CLOSE":"Speichern und schließen"
+	},
+}
