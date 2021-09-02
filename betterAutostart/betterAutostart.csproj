@@ -84,12 +84,6 @@
       <DependentUpon>application.cs</DependentUpon>
     </Compile>
     <Compile Include="ExecutableApp.cs" />
-    <Compile Include="Forms\ProfileInputForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ProfileInputForm.Designer.cs">
-      <DependentUpon>ProfileInputForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Profile.cs" />
     <Compile Include="ProfileHandler.cs" />
     <Compile Include="Root.cs" />
@@ -103,11 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveSystem.cs" />
     <EmbeddedResource Include="Forms\application.resx">
       <DependentUpon>application.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProfileInputForm.resx">
-      <DependentUpon>ProfileInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

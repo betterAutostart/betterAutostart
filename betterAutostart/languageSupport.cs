@@ -24,12 +24,6 @@ namespace betterAutostart
             for (int i = 0; i < this.allLanguageJSON.Length; i++)
             {
                 Root tempLang = JsonConvert.DeserializeObject<Root>(File.ReadAllText(this.allLanguageJSON[i]));
-                /*
-                Console.WriteLine(tempLang.name);
-                Console.WriteLine(tempLang.active);
-                Console.WriteLine(tempLang.strings);
-                Console.WriteLine("----------");
-                */
 
                 languages.Add(tempLang);
                 if (tempLang.active == 1) 
@@ -69,15 +63,6 @@ namespace betterAutostart
         {
             return possibleLanguageNames;
         }
-
-        /*
-         * 	"strings": {	
-		"CREATE_PROFILE": "Profil Erstellen",
-		"EDIT_PROFILE": "Profil Editieren",
-		"SETTINGS": "Einstellungen",
-		"SELECT_LANGUAGE": "Sprache Auswählen"
-	}
-         */
 
         public List<Root> getAllPossibleLanguages()
         {

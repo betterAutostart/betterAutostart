@@ -49,9 +49,9 @@ namespace betterAutostart
             this.lbl_settings_languages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_settings_languages.Location = new System.Drawing.Point(9, 9);
             this.lbl_settings_languages.Name = "lbl_settings_languages";
-            this.lbl_settings_languages.Size = new System.Drawing.Size(76, 20);
+            this.lbl_settings_languages.Size = new System.Drawing.Size(194, 20);
             this.lbl_settings_languages.TabIndex = 1;
-            this.lbl_settings_languages.Text = "Sprache";
+            this.lbl_settings_languages.Text = "lbl_settings_languages";
             // 
             // btn_settings_applySettingsAndClose
             // 
@@ -59,7 +59,7 @@ namespace betterAutostart
             this.btn_settings_applySettingsAndClose.Name = "btn_settings_applySettingsAndClose";
             this.btn_settings_applySettingsAndClose.Size = new System.Drawing.Size(127, 40);
             this.btn_settings_applySettingsAndClose.TabIndex = 2;
-            this.btn_settings_applySettingsAndClose.Text = "Speichern und Schließen";
+            this.btn_settings_applySettingsAndClose.Text = "btn_settings_applySettingsAndClose";
             this.btn_settings_applySettingsAndClose.UseVisualStyleBackColor = true;
             this.btn_settings_applySettingsAndClose.Click += new System.EventHandler(this.btn_settings_applySettingsClickAndClose);
             // 
@@ -69,7 +69,7 @@ namespace betterAutostart
             this.btn_settings_applySettings.Name = "btn_settings_applySettings";
             this.btn_settings_applySettings.Size = new System.Drawing.Size(127, 40);
             this.btn_settings_applySettings.TabIndex = 3;
-            this.btn_settings_applySettings.Text = "Speichern";
+            this.btn_settings_applySettings.Text = "btn_settings_applySettings";
             this.btn_settings_applySettings.UseVisualStyleBackColor = true;
             this.btn_settings_applySettings.Click += new System.EventHandler(this.btn_settings_applySettingsClick);
             // 

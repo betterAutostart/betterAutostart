@@ -48,5 +48,6 @@ namespace betterAutostart
 
             Properties.Settings.Default.Save();
         }
+
     }
 }
