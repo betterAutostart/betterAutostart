@@ -19,4 +19,4 @@ If you want to contribute code...
 
 ### Language
 If BetterAutostart isn't available in your language or some translations are off simply add a translation.JSON file or edit one.
-All Languages can be found in betterAutostart/language
+All Languages can be found in betterAutostart/language.
