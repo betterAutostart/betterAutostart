@@ -15,7 +15,7 @@ BetterAutostart is open for Contribution, i welcome PR's feel free to Contribute
 If an error happens or some bug sneaks in, please feel free to give a detailed description of the problem in the Issue tab, all required Information is listed there.
 
 ### Code
-If you want to contribute code...
+If you want to contribute code....
 
 ### Language
 If BetterAutostart isn't available in your language or some translations are off simply add a translation.JSON file or edit one.
