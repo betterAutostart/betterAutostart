@@ -4,35 +4,12 @@
     <projectFile>betterAutostart/betterAutostart.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e428ca05-24ee-414b-939b-f1ca372f60f8" name="Default Changelist" comment="edit .gitignore">
-      <change afterPath="$PROJECT_DIR$/betterAutostart/LanguageObj.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/betterAutostart/application.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/betterAutostart/application.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/betterAutostart/application.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.betterAutostart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.betterAutostart/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e428ca05-24ee-414b-939b-f1ca372f60f8" name="Default Changelist" comment="added new design, rework everything">
+      <change afterPath="$PROJECT_DIR$/betterAutostart/settings.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/betterAutostart/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/betterAutostart/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart.sln" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/Config.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/ExecutableApp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/ExecutableApp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/application.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/application.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/application.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Forms/settings.resx" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/settings.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Profile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/Profile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/ProfileHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/ProfileHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/Root.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/SaveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/betterAutostart.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/betterAutostart.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/betterAutostart.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/betterAutostart.csproj.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.exe" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.exe.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/bin/Debug/betterAutostart.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/languagePackages/de.JSON" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/languagePackages/de.JSON" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/languagePackages/en.JSON" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/languagePackages/en.JSON" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/languageSupport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/LanguageSupport.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.application.resources" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.application.resources" afterDir="false" />
@@ -42,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.exe" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/obj/Debug/betterAutostart.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterAutostart/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/betterAutostart/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +29,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/betterAutostart/profilePanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/betterAutostart/executableAppPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/betterAutostart/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -68,6 +46,8 @@
       <option value="$PROJECT_DIR$/betterAutostart/Utility.cs" />
       <option value="$PROJECT_DIR$/.git/info/exclude" />
       <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/betterAutostart/LanguageSupport.cs" />
+      <option value="$PROJECT_DIR$/betterAutostart/settings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vjYBxfAbLtb0whEWgOYBS5O134" />
@@ -135,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637440669348</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added new design, rework everything">
+      <created>1637441087677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637441087677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +176,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="edit .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit .gitignore" />
+    <MESSAGE value="added new design, rework everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new design, rework everything" />
   </component>
 </project>
