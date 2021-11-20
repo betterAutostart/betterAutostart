@@ -10,11 +10,11 @@ using Newtonsoft.Json;
 
 namespace betterAutostart
 {
-    class languageSupport
+    class LanguageSupport
     {
         private String[] allLanguageJSON = Directory.GetFiles("./../../languagePackages");
-        private List<Root> languages = new List<Root>();
-        private List<Root> possibleLanguages = new List<Root>();
+        private List<LanguageObj> languages = new List<LanguageObj>();
+        private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
         private List<String> possibleLanguageNames = new List<String>();
 
 
@@ -23,7 +23,7 @@ namespace betterAutostart
             Console.WriteLine("loading Languages");
             for (int i = 0; i < this.allLanguageJSON.Length; i++)
             {
-                Root tempLang = JsonConvert.DeserializeObject<Root>(File.ReadAllText(this.allLanguageJSON[i]));
+                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJSON[i]));
 
                 languages.Add(tempLang);
                 if (tempLang.active == 1) 
@@ -35,18 +35,12 @@ namespace betterAutostart
 
         }
 
-        public void applyLanguageSettings() 
-        {
-            Config.applicationForm.updateTranslation();
-            Config.settingsForm.updateTranslation();
-        }
-
         public Object getTranslation(String property)
         {
             Console.WriteLine(property);
             try
             {
-                return Config.activeLanguage.strings.GetType().GetField(property).GetValue(Config.activeLanguage.strings);
+                return Config.ActiveLanguage.strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.strings);
             }
             catch (Exception e)
             {
@@ -54,7 +48,7 @@ namespace betterAutostart
             }
         }
 
-        public Root getLanguageByName(String name) 
+        public LanguageObj getLanguageByName(String name) 
         {
             return possibleLanguages.Find(lang => lang.name == name);
         }
@@ -64,7 +58,7 @@ namespace betterAutostart
             return possibleLanguageNames;
         }
 
-        public List<Root> getAllPossibleLanguages()
+        public List<LanguageObj> getAllPossibleLanguages()
         {
             return possibleLanguages;
         }

@@ -7,48 +7,84 @@ using System.Diagnostics;
 
 namespace betterAutostart
 {
-    class Profile
+    public class Profile
     {
-        public String Name = ""; // Individual Name important for saveSystem
+        public String Name; // Individual Name important for saveSystem
         public bool Active = false;
         public bool ShouldAutostart = false;
+        public bool ExecuteAsAdmin = false;
         public List<ExecutableApp> executableApps;
 
         public Profile()
         {
-            executableApps = new List<ExecutableApp>();
+            this.executableApps = new List<ExecutableApp>();
+            this.Name = Utility.GetTranslation("PROFILE_DEFAULTNAME");
         }
 
         public void addNewExecutableApp(String path, String customName = "", bool startAsAdmin = false)
         {
-            Console.WriteLine(path);
-            executableApps.Add(new ExecutableApp(path, customName, startAsAdmin));
-
-            Console.WriteLine("Added new Executable App: " +  this.executableApps[this.executableApps.Count()-1].path);
+            this.executableApps.Add(new ExecutableApp(path, customName, startAsAdmin));
         }
 
         public void ExecuteApp(int index)
         {
-            executableApps[index].Execute();
+            this.executableApps[index].Execute();
+        }
+
+        public void ExecuteAllApps()
+        {
+            for(int i = 0; i < this.executableApps.Count(); i++)
+            {
+                this.executableApps[i].Execute();
+            }
         }
 
         public void stopProfile()
         {
-            for (int i = 0; i < executableApps.Count(); i++)
+            for (int i = 0; i < this.executableApps.Count(); i++)
             {
-                executableApps[i].Kill();
+                this.executableApps[i].Kill();
             }
         }
 
-        public List<String> GetDemoList()
+        public List<String> GetCustomExecutablesList()
         {
-            List<String> demoList = new List<String>();
+            List<String> executables = new List<String>();
 
             for(int i = 0; i < this.executableApps.Count(); i++)
             {
-                demoList.Add(this.executableApps[i].path);
+                executables.Add(this.executableApps[i].GetExecutableCustomName());
             }
-            return demoList;
+            return executables;
+        }
+
+        public List<String> GetEditableExecutablesList()
+        {
+            List<String> executables = new List<String>();
+
+            for (int i = 0; i < this.executableApps.Count(); i++)
+            {
+                executables.Add(this.executableApps[i].GetExecutableCustomName() + " (" + this.executableApps[i].GetPath() + ")");
+            }
+            return executables;
+        }
+
+        public ExecutableApp GetExecutableByIndex(int index)
+        {
+            if ((this.executableApps.Count() - 1) < index) return null;
+            return this.executableApps[index];
+        }
+
+        public void DeleteExecutable(ExecutableApp app)
+        {
+            if (app == null) return;
+            this.executableApps = this.executableApps.Where(val => val != app).ToList();
+            Config.SaveSystem.SaveProfile(this, this.Name);
+        }
+
+        public void RemoveExecutableByIndex(int index)
+        {
+            this.executableApps.Remove(this.executableApps[index]);
         }
     }
 }

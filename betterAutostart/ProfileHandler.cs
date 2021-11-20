@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks;   
 
 namespace betterAutostart
 {
@@ -24,6 +24,12 @@ namespace betterAutostart
         public void AddExistingProfile(Profile p)
         {
             this.profileList.Add(p);
+        }
+
+        public void DeleteProfile(Profile p)
+        {
+            this.profileList = this.profileList.Where(val => val != p).ToList();
+            Config.SaveSystem.SaveProfile(p, p.Name);
         }
 
         public List<Profile> GetProfiles()

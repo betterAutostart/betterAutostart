@@ -1,39 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Diagnostics;
 
 namespace betterAutostart
 {
     class Config
     {
-        public static Root activeLanguage;
-        public static languageSupport langSupport;
-        public static application applicationForm;
-        public static settings settingsForm;
-        public static ProfileHandler pHandler;
+        public static LanguageObj ActiveLanguage;
+        public static LanguageSupport LangSupport;
+        public static application ApplicationForm;
+        public static ProfileHandler PHandler;
         public static SaveSystem SaveSystem;
 
         /*
          * Used packages:
          * Newtonsoft.Json (https://www.newtonsoft.com/json)
-         * 
-         * 
-         * Used to Convert JSON to Root.cs class:
-         * https://json2csharp.com/json-to-csharp
-         *  !!IMPORTANT!! in settings (left hand corner) you need to check "Use Fields"
+         * NHotkey.WindowsForms (https://github.com/thomaslevesque/NHotkey)
+         * Microsoft Visual Studio Installer Projects (https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
          */
 
-        public static void applyConfig() 
+        public static void ApplyConfig() 
         {
-            Config.langSupport = new languageSupport();
-            Config.langSupport.loadAllLanguages();
-            Config.activeLanguage = Config.langSupport.getLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
-            Config.pHandler = new ProfileHandler();
+            LangSupport = new LanguageSupport();
+            LangSupport.loadAllLanguages();
+            ActiveLanguage = LangSupport.getLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            PHandler = new ProfileHandler();
 
-            Config.SaveSystem = new SaveSystem();
+            SaveSystem = new SaveSystem();
         }
-
     }
 }

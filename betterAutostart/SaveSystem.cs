@@ -13,7 +13,8 @@ namespace betterAutostart
         private String[] allSaveFiles;
         private String filePrefix = @"profileSaveFile_";
         private String fileEndingPrefix = @".json";
-        private String saveDirectory = @"./../../saveFiles/";
+        private String saveDirectory = @"./../../saveFiles/"; // DEBUG MODE SETTING
+        //private String saveDirectory = @"./saveFiles/"; // RELEASE MODE SETTING
 
         public SaveSystem()
         {
@@ -28,13 +29,13 @@ namespace betterAutostart
             {
                 String json = File.ReadAllText(allSaveFiles[i]);
                 Profile tempProfile = JsonConvert.DeserializeObject<Profile>(json);
-                Config.pHandler.AddExistingProfile(tempProfile);
+                Config.PHandler.AddExistingProfile(tempProfile);
             }
         }
 
         public void SaveAllProfiles()
         {
-            List<Profile> allProfiles = Config.pHandler.GetProfiles();
+            List<Profile> allProfiles = Config.PHandler.GetProfiles();
 
             for(int i = 0; i < allProfiles.Count(); i++)
             {
@@ -61,10 +62,29 @@ namespace betterAutostart
             }
         }
 
+        public void SaveProfile(Profile profile, String oldProfileName)
+        {
+            String filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
+
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+            File.CreateText(filePath).Close();
+
+            
+            String json = JsonConvert.SerializeObject(profile, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+
+            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
+            if (File.Exists(oldFilePath))
+            {
+                File.Delete(oldFilePath);
+            }
+        }
+
         private void checkSaveFilePath()
         {
-            Console.WriteLine("checking saveFilePath");
-            Console.WriteLine(Directory.GetCurrentDirectory());
             if(!Directory.Exists(this.saveDirectory))
             {
                 Directory.CreateDirectory(this.saveDirectory);
