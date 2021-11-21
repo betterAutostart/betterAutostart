@@ -65,7 +65,10 @@ namespace betterAutostart
                     }
                 }
             }
-            catch (Exception e) { }
+            catch (Exception e)
+            {
+                Config.ErrorLog.LogError(e);
+            }
         }
 
         public String GetExecutableCustomName()

@@ -11,6 +11,7 @@ namespace betterAutostart
         public static application ApplicationForm;
         public static ProfileHandler PHandler;
         public static SaveSystem SaveSystem;
+        public static ErrorLog ErrorLog;
 
         /*
          * Used packages:
@@ -25,7 +26,7 @@ namespace betterAutostart
             LangSupport.LoadAllLanguages();
             ActiveLanguage = LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
             PHandler = new ProfileHandler();
-
+            ErrorLog = new ErrorLog();
             SaveSystem = new SaveSystem();
         }
     }
