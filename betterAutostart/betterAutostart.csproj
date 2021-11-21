@@ -134,6 +134,7 @@
     <Compile Include="editProfilePanel.Designer.cs">
       <DependentUpon>editProfilePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorLog.cs" />
     <Compile Include="ExecutableApp.cs" />
     <Compile Include="executableAppPanel.cs">
       <SubType>Form</SubType>
