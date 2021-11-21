@@ -96,11 +96,11 @@ namespace betterAutostart
         {
             if (DesignMode)
             {
-                activeForm.Icon = new Icon(@"../../betterAutostartIcon.ico");
+                activeForm.Icon = new Icon(@"../../assets/betterAutostartIcon.ico");
             }
             else
             {
-                activeForm.Icon = new Icon(@"betterAutostartIcon.ico");
+                activeForm.Icon = new Icon(@"./assets/betterAutostartIcon.ico");
             }
         }
 

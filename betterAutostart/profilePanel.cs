@@ -131,6 +131,7 @@ namespace betterAutostart
             pnl_background.Name = "pnl_main_" + index;
             pnl_background.Size = new Size(335, 299);
             pnl_background.TabIndex = 2;
+            this.Controls.Add(pnl_background);
 
 
             // TITLE LABLE
@@ -143,6 +144,7 @@ namespace betterAutostart
             lbl_title.Size = new Size(128, 25);
             lbl_title.TabIndex = 0;
             lbl_title.Text = profileName;
+            pnl_background.Controls.Add(lbl_title);
 
 
             // HOTKEY LABLE
@@ -156,6 +158,7 @@ namespace betterAutostart
             lbl_hotkey.TabIndex = 5;
             lbl_hotkey.Text = "Hotkey: /";
             lbl_hotkey.TextAlign = ContentAlignment.MiddleCenter;
+            pnl_background.Controls.Add(lbl_hotkey);
 
 
             // START ALL BUTTON
@@ -172,6 +175,7 @@ namespace betterAutostart
             btn_startAll.Text = Utility.GetTranslation("PROFILEP_STARTPROFILE");
             btn_startAll.UseVisualStyleBackColor = false;
             btn_startAll.Click += new EventHandler(this.btn_startProfile_Click);
+            pnl_background.Controls.Add(btn_startAll);
 
 
             // STOP ALL BUTTON
@@ -188,6 +192,7 @@ namespace betterAutostart
             btn_stopAll.Text = Utility.GetTranslation("PROFILEP_STOPPROFILE");
             btn_stopAll.UseVisualStyleBackColor = false;
             btn_stopAll.Click += new EventHandler(this.btn_stopProfile_Click);
+            pnl_background.Controls.Add(btn_stopAll);
 
 
             // EDIT PROFILE BUTTON
@@ -204,6 +209,7 @@ namespace betterAutostart
             btn_editProfile.Text = Utility.GetTranslation("PROFILEP_EDITPROFILE");
             btn_editProfile.UseVisualStyleBackColor = false;
             btn_editProfile.Click += new EventHandler(this.btn_editProfile_Click);
+            pnl_background.Controls.Add(btn_editProfile);
 
 
             // EXECUTABLES LIST BOX
@@ -220,6 +226,7 @@ namespace betterAutostart
 
             lstBx_executables.Items.AddRange(executables);
             lstBx_executables.DoubleClick += new EventHandler(this.lstBx_executables_doubleClick);
+            pnl_background.Controls.Add(lstBx_executables); 
 
 
             this.Controls.Add(pnl_background);
@@ -228,11 +235,9 @@ namespace betterAutostart
             this.ResumeLayout(false);
 
             panels.Add(pnl_background);
+
+            this.AutoScroll = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

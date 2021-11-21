@@ -117,14 +117,123 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pnl_navBarHighlight.Name" xml:space="preserve">
+    <value>pnl_navBarHighlight</value>
+  </data>
+  <data name="&gt;&gt;pnl_navBarHighlight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_navBarHighlight.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;pnl_navBarHighlight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_settings.Name" xml:space="preserve">
+    <value>btn_sideMenu_settings</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_settings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_settings.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_settings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder3.Name" xml:space="preserve">
+    <value>btn_sideMenu_placeholder3</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder3.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder2.Name" xml:space="preserve">
+    <value>btn_sideMenu_placeholder2</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder2.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder1.Name" xml:space="preserve">
+    <value>btn_sideMenu_placeholder1</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder1.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_placeholder1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_profiles.Name" xml:space="preserve">
+    <value>btn_sideMenu_profiles</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_profiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_profiles.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;btn_sideMenu_profiles.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu_logo.Name" xml:space="preserve">
+    <value>pnl_sideMenu_logo</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu_logo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu_logo.Parent" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu_logo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnl_sideMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnl_sideMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnl_sideMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 664</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnl_sideMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu.Name" xml:space="preserve">
+    <value>pnl_sideMenu</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnl_sideMenu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="pnl_navBarHighlight.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 700</value>
   </data>
   <data name="pnl_navBarHighlight.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 45</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pnl_navBarHighlight.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -140,7 +249,6 @@
   <data name="&gt;&gt;pnl_navBarHighlight.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_sideMenu_settings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -348,24 +456,6 @@
   <data name="&gt;&gt;btn_sideMenu_profiles.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="lbl_sideMenuTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 20pt</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 31</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 37</value>
-  </data>
-  <data name="lbl_sideMenuTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Text" xml:space="preserve">
-    <value>Better Autostart</value>
-  </data>
   <data name="&gt;&gt;lbl_sideMenuTitle.Name" xml:space="preserve">
     <value>lbl_sideMenuTitle</value>
   </data>
@@ -402,29 +492,35 @@
   <data name="&gt;&gt;pnl_sideMenu_logo.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="pnl_sideMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="lbl_sideMenuTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="pnl_sideMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="lbl_sideMenuTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Nirmala UI, 22pt</value>
   </data>
-  <data name="pnl_sideMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 664</value>
+  <data name="lbl_sideMenuTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
   </data>
-  <data name="pnl_sideMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="lbl_sideMenuTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 41</value>
   </data>
-  <data name="&gt;&gt;pnl_sideMenu.Name" xml:space="preserve">
-    <value>pnl_sideMenu</value>
+  <data name="lbl_sideMenuTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;pnl_sideMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_sideMenuTitle.Text" xml:space="preserve">
+    <value>Better Autostart</value>
   </data>
-  <data name="&gt;&gt;pnl_sideMenu.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbl_sideMenuTitle.Name" xml:space="preserve">
+    <value>lbl_sideMenuTitle</value>
   </data>
-  <data name="&gt;&gt;pnl_sideMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;lbl_sideMenuTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_sideMenuTitle.Parent" xml:space="preserve">
+    <value>pnl_sideMenu_logo</value>
+  </data>
+  <data name="&gt;&gt;lbl_sideMenuTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="pnl_childForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -484,13 +580,13 @@
     <value>True</value>
   </data>
   <data name="lbl_childFormHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 26pt</value>
+    <value>Nirmala UI, 26pt, style=Bold</value>
   </data>
   <data name="lbl_childFormHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 9</value>
   </data>
   <data name="lbl_childFormHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 47</value>
+    <value>362, 47</value>
   </data>
   <data name="lbl_childFormHeader.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>

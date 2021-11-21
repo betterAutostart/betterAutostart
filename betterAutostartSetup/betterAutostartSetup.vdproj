@@ -160,12 +160,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_48C474E25D33220F1F48DD9A664A536A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_CB9D63114A95456592DE2CB3F5021971"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -235,6 +229,12 @@
         "OwnerKey" = "8:_0420FBA12A6604F431D9031C59EC53CC"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_48C474E25D33220F1F48DD9A664A536A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -253,6 +253,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -269,6 +277,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -303,7 +327,7 @@
             "SourcePath" = "8:C:\\Users\\justu\\Downloads\\betterAutostartIcon.ico"
             "TargetName" = "8:betterAutostartIcon.ico"
             "Tag" = "8:"
-            "Folder" = "8:_A67F36CB418E4BF4830F0420DA426917"
+            "Folder" = "8:_C169DBD82FC340F1977DC0E62771B951"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -768,6 +792,17 @@
                         {
                         }
                     }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C169DBD82FC340F1977DC0E62771B951"
+                    {
+                    "Name" = "8:assets"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_E1ADE194258A40159D7687DC1E9E2EE6"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_EF1A2EBFB2E442EAA597C6681F562183"
@@ -798,7 +833,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BetterAutostart"
         "ProductCode" = "8:{5306E0EF-104C-4B9F-B957-33602DCEFCAB}"
-        "PackageCode" = "8:{7240953B-7224-4EC6-820F-5E348CD64BB1}"
+        "PackageCode" = "8:{5FD188F2-E0BD-4B03-9AB8-5AD93D5CE14D}"
         "UpgradeCode" = "8:{73A80BF1-85CD-466C-92EB-F602E8302C76}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -929,7 +964,7 @@
             "Target" = "8:_9085EF3F7DB949EA855E93F973B42838"
             "Folder" = "8:_9085EF3F7DB949EA855E93F973B42838"
             "WorkingFolder" = "8:_9085EF3F7DB949EA855E93F973B42838"
-            "Icon" = "8:"
+            "Icon" = "8:_015E97A4695F443697F30A77F714DFDA"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_84E61F3F8323424EBAA0A2032FDD673F"
@@ -943,7 +978,7 @@
             "Target" = "8:_EF1A2EBFB2E442EAA597C6681F562183"
             "Folder" = "8:_EF1A2EBFB2E442EAA597C6681F562183"
             "WorkingFolder" = "8:_EF1A2EBFB2E442EAA597C6681F562183"
-            "Icon" = "8:"
+            "Icon" = "8:_015E97A4695F443697F30A77F714DFDA"
             "Feature" = "8:"
             }
         }

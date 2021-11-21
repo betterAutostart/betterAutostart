@@ -91,12 +91,12 @@ namespace betterAutostart
             this.btn_settings_apply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_settings_apply.Font = new System.Drawing.Font("Nirmala UI", 11F);
             this.btn_settings_apply.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_settings_apply.Location = new System.Drawing.Point(612, 556);
+            this.btn_settings_apply.Location = new System.Drawing.Point(612, 568);
             this.btn_settings_apply.Margin = new System.Windows.Forms.Padding(0);
             this.btn_settings_apply.Name = "btn_settings_apply";
-            this.btn_settings_apply.Size = new System.Drawing.Size(127, 40);
+            this.btn_settings_apply.Size = new System.Drawing.Size(127, 28);
             this.btn_settings_apply.TabIndex = 3;
-            this.btn_settings_apply.Text = " btn_settings_apply";
+            this.btn_settings_apply.Text = "Save";
             this.btn_settings_apply.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_settings_apply.UseVisualStyleBackColor = false;
             this.btn_settings_apply.Click += new System.EventHandler(this.btn_settings_applySettingsClick);

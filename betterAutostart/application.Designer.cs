@@ -48,7 +48,7 @@ namespace betterAutostart
             // 
             // pnl_sideMenu
             // 
-            this.pnl_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (24)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.pnl_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnl_sideMenu.Controls.Add(this.pnl_navBarHighlight);
             this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_settings);
             this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_placeholder3);
@@ -61,7 +61,7 @@ namespace betterAutostart
             // 
             // pnl_navBarHighlight
             // 
-            this.pnl_navBarHighlight.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.pnl_navBarHighlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             resources.ApplyResources(this.pnl_navBarHighlight, "pnl_navBarHighlight");
             this.pnl_navBarHighlight.Name = "pnl_navBarHighlight";
             // 
@@ -69,7 +69,7 @@ namespace betterAutostart
             // 
             resources.ApplyResources(this.btn_sideMenu_settings, "btn_sideMenu_settings");
             this.btn_sideMenu_settings.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_settings.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.btn_sideMenu_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_sideMenu_settings.Name = "btn_sideMenu_settings";
             this.btn_sideMenu_settings.UseVisualStyleBackColor = true;
             this.btn_sideMenu_settings.Click += new System.EventHandler(this.btn_sideMenu_settings_Click);
@@ -78,7 +78,7 @@ namespace betterAutostart
             // 
             resources.ApplyResources(this.btn_sideMenu_placeholder3, "btn_sideMenu_placeholder3");
             this.btn_sideMenu_placeholder3.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder3.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.btn_sideMenu_placeholder3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_sideMenu_placeholder3.Name = "btn_sideMenu_placeholder3";
             this.btn_sideMenu_placeholder3.UseVisualStyleBackColor = true;
             // 
@@ -86,7 +86,7 @@ namespace betterAutostart
             // 
             resources.ApplyResources(this.btn_sideMenu_placeholder2, "btn_sideMenu_placeholder2");
             this.btn_sideMenu_placeholder2.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.btn_sideMenu_placeholder2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_sideMenu_placeholder2.Name = "btn_sideMenu_placeholder2";
             this.btn_sideMenu_placeholder2.UseVisualStyleBackColor = true;
             // 
@@ -94,7 +94,7 @@ namespace betterAutostart
             // 
             resources.ApplyResources(this.btn_sideMenu_placeholder1, "btn_sideMenu_placeholder1");
             this.btn_sideMenu_placeholder1.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.btn_sideMenu_placeholder1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_sideMenu_placeholder1.Name = "btn_sideMenu_placeholder1";
             this.btn_sideMenu_placeholder1.UseVisualStyleBackColor = true;
             // 
@@ -102,7 +102,7 @@ namespace betterAutostart
             // 
             resources.ApplyResources(this.btn_sideMenu_profiles, "btn_sideMenu_profiles");
             this.btn_sideMenu_profiles.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_profiles.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.btn_sideMenu_profiles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_sideMenu_profiles.Name = "btn_sideMenu_profiles";
             this.btn_sideMenu_profiles.UseVisualStyleBackColor = true;
             this.btn_sideMenu_profiles.Click += new System.EventHandler(this.btn_sideMenu_profiles_Click);
@@ -116,12 +116,12 @@ namespace betterAutostart
             // lbl_sideMenuTitle
             // 
             resources.ApplyResources(this.lbl_sideMenuTitle, "lbl_sideMenuTitle");
-            this.lbl_sideMenuTitle.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.lbl_sideMenuTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lbl_sideMenuTitle.Name = "lbl_sideMenuTitle";
             // 
             // pnl_childForm
             // 
-            this.pnl_childForm.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.pnl_childForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             resources.ApplyResources(this.pnl_childForm, "pnl_childForm");
             this.pnl_childForm.Name = "pnl_childForm";
             // 
@@ -137,14 +137,14 @@ namespace betterAutostart
             // lbl_childFormHeader
             // 
             resources.ApplyResources(this.lbl_childFormHeader, "lbl_childFormHeader");
-            this.lbl_childFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
+            this.lbl_childFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.lbl_childFormHeader.Name = "lbl_childFormHeader";
             // 
             // application
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.lbl_childFormHeader);
             this.Controls.Add(this.pnl_childForm);
@@ -159,6 +159,7 @@ namespace betterAutostart
             this.pnl_sideMenu_logo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
