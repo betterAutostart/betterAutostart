@@ -13,8 +13,8 @@ namespace betterAutostart
         private String[] allSaveFiles;
         private String filePrefix = @"profileSaveFile_";
         private String fileEndingPrefix = @".json";
-        private String saveDirectory = @"./../../saveFiles/"; // DEBUG MODE SETTING
-        //private String saveDirectory = @"./saveFiles/"; // RELEASE MODE SETTING
+        //private String saveDirectory = @"./../../saveFiles/"; // DEBUG MODE SETTING
+        private String saveDirectory = @"./saveFiles/"; // RELEASE MODE SETTING
 
         public SaveSystem()
         {

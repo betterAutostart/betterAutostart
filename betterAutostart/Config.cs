@@ -22,8 +22,8 @@ namespace betterAutostart
         public static void ApplyConfig() 
         {
             LangSupport = new LanguageSupport();
-            LangSupport.loadAllLanguages();
-            ActiveLanguage = LangSupport.getLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            LangSupport.LoadAllLanguages();
+            ActiveLanguage = LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
             PHandler = new ProfileHandler();
 
             SaveSystem = new SaveSystem();

@@ -160,7 +160,6 @@ namespace betterAutostart
             this.ResumeLayout(false);
             this.PerformLayout();
         }
-        private System.Windows.Forms.ListView listView1;
 
         #endregion
         private System.Windows.Forms.Panel pnl_sideMenu;

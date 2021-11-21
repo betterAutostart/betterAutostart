@@ -16,7 +16,7 @@ namespace betterAutostart
         public settings()
         {
             InitializeComponent();
-            drpD_languages.Items.AddRange(Config.LangSupport.getPossibleLanguagesNames().Cast<object>().ToArray());
+            drpD_languages.Items.AddRange(Config.LangSupport.GetPossibleLanguagesNames().Cast<object>().ToArray());
             drpD_languages.SelectedItem = Config.ActiveLanguage.name;
 
             this.UpdateTranslation();
@@ -56,7 +56,7 @@ namespace betterAutostart
         {
             //TODO Check if SelectedItem exists
             Properties.Settings.Default["SelectedLanguage"] = drpD_languages.SelectedItem.ToString();
-            Config.ActiveLanguage = Config.LangSupport.getLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            Config.ActiveLanguage = Config.LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
 
             Properties.Settings.Default.Save();
         }

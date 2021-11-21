@@ -12,13 +12,14 @@ namespace betterAutostart
 {
     class LanguageSupport
     {
-        private String[] allLanguageJSON = Directory.GetFiles("./../../languagePackages");
+        //private String[] allLanguageJSON = Directory.GetFiles("./../../languagePackages");
+        private String[] allLanguageJSON = Directory.GetFiles("./languagePackages");
         private List<LanguageObj> languages = new List<LanguageObj>();
         private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
         private List<String> possibleLanguageNames = new List<String>();
 
 
-        public void loadAllLanguages()
+        public void LoadAllLanguages()
         {
             Console.WriteLine("loading Languages");
             for (int i = 0; i < this.allLanguageJSON.Length; i++)
@@ -40,27 +41,22 @@ namespace betterAutostart
             Console.WriteLine(property);
             try
             {
-                return Config.ActiveLanguage.strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.strings);
+                return Config.ActiveLanguage.strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.strings).ToString();
             }
             catch (Exception e)
             {
-                return null;
+                return "Not found";
             }
         }
 
-        public LanguageObj getLanguageByName(String name) 
+        public LanguageObj GetLanguageByName(String name) 
         {
             return possibleLanguages.Find(lang => lang.name == name);
         }
 
-        public List<String> getPossibleLanguagesNames() 
+        public List<String> GetPossibleLanguagesNames() 
         {
             return possibleLanguageNames;
-        }
-
-        public List<LanguageObj> getAllPossibleLanguages()
-        {
-            return possibleLanguages;
         }
     }
 }

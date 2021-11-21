@@ -106,7 +106,7 @@ namespace betterAutostart
 
         public static String GetTranslation(String keyword)
         {
-            return Config.LangSupport.getTranslation(keyword);
+            return Config.LangSupport.getTranslation(keyword).ToString();
         }
 
     }
