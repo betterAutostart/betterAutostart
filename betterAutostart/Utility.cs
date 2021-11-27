@@ -27,7 +27,7 @@ namespace betterAutostart
             int nHeightEllipse
         );
 
-        public static bool DesignMode;
+        public static bool DesignMode = false;
         
         public static void ExploreFile(String filePath)
         {
@@ -64,23 +64,7 @@ namespace betterAutostart
             }
             catch { }
         }
-        
-        public static bool IsInDesignMode() {
-                bool isInDesignMode = LicenseManager.UsageMode == LicenseUsageMode.Designtime || Debugger.IsAttached == true;
 
-                if (!isInDesignMode) {
-                    using (var process = Process.GetCurrentProcess()) {
-                        
-                        return process.ProcessName.ToLowerInvariant().Contains("devenv");
-                    }
-                }
-                return isInDesignMode;
-        }
-
-        public static void CheckDebugMode()
-        {
-            DesignMode = IsInDesignMode();
-        }
 
         public static void DebugLog(String msg)
         {

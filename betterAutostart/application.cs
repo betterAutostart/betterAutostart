@@ -12,12 +12,16 @@ namespace betterAutostart
 
         public application()
         {
+            #if DEBUG
+            Utility.DesignMode = true;
+            #endif
+
             Config.ApplyConfig();
             Config.ApplicationForm = this;
             InitializeComponent();
             this.Text = "BetterAutostart";
 
-            this.updateTranslation();
+            this.UpdateTranslation();
             Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
             this.btn_sideMenu_profiles_Click((this.btn_sideMenu_profiles as object), null);
         }
@@ -37,7 +41,7 @@ namespace betterAutostart
             base.WndProc(ref m);
         }
 
-        public void updateTranslation() 
+        public void UpdateTranslation() 
         {
             btn_sideMenu_profiles.Text = Utility.GetTranslation("SIDEMENU_PROFILES");
             btn_sideMenu_placeholder1.Text = Utility.GetTranslation("PLACEHOLDER");
@@ -112,7 +116,6 @@ namespace betterAutostart
 
         private void application_Load(object sender, EventArgs e)
         {
-            Utility.CheckDebugMode();
             Utility.SetIcon(this);
         }
     }
