@@ -15,7 +15,7 @@ namespace betterAutostart
             this.profileList = new List<Profile>();
         }
 
-        public void addNewProfile()
+        public void AddNewProfile()
         {
             Profile tempProfile = new Profile();
             profileList.Add(tempProfile);

@@ -67,8 +67,6 @@ namespace betterAutostart
         
         public static bool IsInDesignMode() {
                 bool isInDesignMode = LicenseManager.UsageMode == LicenseUsageMode.Designtime || Debugger.IsAttached == true;
-                Console.WriteLine(LicenseManager.UsageMode == LicenseUsageMode.Designtime);
-                Console.WriteLine(Debugger.IsAttached == true);
 
                 if (!isInDesignMode) {
                     using (var process = Process.GetCurrentProcess()) {

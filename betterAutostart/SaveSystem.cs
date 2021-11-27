@@ -13,11 +13,15 @@ namespace betterAutostart
         private String[] allSaveFiles;
         private String filePrefix = @"profileSaveFile_";
         private String fileEndingPrefix = @".json";
-        //private String saveDirectory = @"./../../saveFiles/"; // DEBUG MODE SETTING
-        private String saveDirectory = @"./saveFiles/"; // RELEASE MODE SETTING
+        private String saveDirectory = @"./saveFiles/";
 
         public SaveSystem()
         {
+            if (Utility.DesignMode)
+            {
+                this.saveDirectory = @"./../../saveFiles/";
+            }
+            
             this.checkSaveFilePath();
             this.allSaveFiles = Directory.GetFiles(this.saveDirectory, this.filePrefix + "*" + this.fileEndingPrefix);
             this.LoadAllProfiles();

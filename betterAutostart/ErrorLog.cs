@@ -6,7 +6,7 @@ namespace betterAutostart
 {
     public class ErrorLog
     {
-        private String errorDirectory;
+        private String errorDirectory = @"./log/";
         private String[] errorLogs;
         private String activeLogFilePath;
 
@@ -18,10 +18,6 @@ namespace betterAutostart
             if (Utility.DesignMode)
             {
                 errorDirectory = @"./../../log/";
-            }
-            else
-            {
-                errorDirectory = @"./log/";
             }
             
             this.CheckDirectory();

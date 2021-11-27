@@ -43,7 +43,7 @@ namespace betterAutostart
         }
         private void btn_addBlankProfile_Click(object sender, EventArgs e)
         {
-            Config.PHandler.addNewProfile();
+            Config.PHandler.AddNewProfile();
 
             List<Profile> profiles = Config.PHandler.GetProfiles();
             this.createProfilePanel(profiles.Count()-1, profiles[profiles.Count() - 1].Name, profiles[profiles.Count() - 1].GetCustomExecutablesList().ToArray());

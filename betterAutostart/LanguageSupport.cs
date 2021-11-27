@@ -12,8 +12,7 @@ namespace betterAutostart
 {
     class LanguageSupport
     {
-        //private String[] allLanguageJSON = Directory.GetFiles("./../../languagePackages");
-        private String[] allLanguageJSON = Directory.GetFiles("./languagePackages");
+        private String[] allLanguageJSONFiles = Directory.GetFiles("./languagePackages");
         private List<LanguageObj> languages = new List<LanguageObj>();
         private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
         private List<String> possibleLanguageNames = new List<String>();
@@ -21,10 +20,14 @@ namespace betterAutostart
 
         public void LoadAllLanguages()
         {
-            Console.WriteLine("loading Languages");
-            for (int i = 0; i < this.allLanguageJSON.Length; i++)
+            if (Utility.DesignMode)
             {
-                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJSON[i]));
+                this.allLanguageJSONFiles = Directory.GetFiles("./../../languagePackages");
+            }
+            
+            for (int i = 0; i < this.allLanguageJSONFiles.Length; i++)
+            {
+                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJSONFiles[i]));
 
                 languages.Add(tempLang);
                 if (tempLang.active == 1) 
@@ -38,13 +41,13 @@ namespace betterAutostart
 
         public Object getTranslation(String property)
         {
-            Console.WriteLine(property);
             try
             {
                 return Config.ActiveLanguage.strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.strings).ToString();
             }
             catch (Exception e)
             {
+                Config.ErrorLog.LogError(e);
                 return "Not found";
             }
         }
