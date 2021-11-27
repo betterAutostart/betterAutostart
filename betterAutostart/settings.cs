@@ -44,19 +44,21 @@ namespace betterAutostart
 
         private void btn_settings_applySettingsClick(object sender, EventArgs e)
         {
-            this.saveSettings();
+            this.SaveSettings();
         }
         private void btn_settings_applySettingsClickAndClose(object sender, EventArgs e)
         {
-            this.saveSettings();
+            this.SaveSettings();
             this.Close();
         }
 
-        private void saveSettings() 
+        private void SaveSettings() 
         {
-            //TODO Check if SelectedItem exists
+            if (drpD_languages.SelectedItem == null) return;
             Properties.Settings.Default["SelectedLanguage"] = drpD_languages.SelectedItem.ToString();
             Config.ActiveLanguage = Config.LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            Config.ApplicationForm.UpdateTranslation();
+            this.UpdateTranslation();
 
             Properties.Settings.Default.Save();
         }

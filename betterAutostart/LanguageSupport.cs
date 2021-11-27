@@ -12,7 +12,7 @@ namespace betterAutostart
 {
     class LanguageSupport
     {
-        private String[] allLanguageJSONFiles = Directory.GetFiles("./languagePackages");
+        private String[] allLanguageJSONFiles;
         private List<LanguageObj> languages = new List<LanguageObj>();
         private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
         private List<String> possibleLanguageNames = new List<String>();
@@ -23,6 +23,10 @@ namespace betterAutostart
             if (Utility.DesignMode)
             {
                 this.allLanguageJSONFiles = Directory.GetFiles("./../../languagePackages");
+            }
+            else
+            {
+                this.allLanguageJSONFiles = Directory.GetFiles("./languagePackages");
             }
             
             for (int i = 0; i < this.allLanguageJSONFiles.Length; i++)

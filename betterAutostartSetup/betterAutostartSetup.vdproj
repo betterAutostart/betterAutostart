@@ -325,7 +325,7 @@
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_015E97A4695F443697F30A77F714DFDA"
             {
             "SourcePath" = "8:C:\\Users\\justu\\Downloads\\betterAutostartIcon.ico"
-            "TargetName" = "8:betterAutostartIcon.ico"
+            "TargetName" = "8:assets\\betterAutostartIcon.ico"
             "Tag" = "8:"
             "Folder" = "8:_C169DBD82FC340F1977DC0E62771B951"
             "Condition" = "8:"
