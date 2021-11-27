@@ -142,16 +142,24 @@ namespace betterAutostart
             String text = txtBx_pName.Text;
             if (text.Length <= 0 || text == null) return;
 
-            String changedChar = text.Substring(text.Length-1, 1);
-            if (!System.Text.RegularExpressions.Regex.IsMatch(changedChar, @"^[a-zA-Z ]"))
+            char[] chars = text.ToCharArray();
+            bool wronChar = false;
+            for(int i = 0; i < chars.Count(); i++)
             {
-                txtBx_pName.Text = text.Remove(text.Length - 1);
-                lbl_txtBxError.Text = Utility.GetTranslation("EDITP_ERROR_ONLYALPHABETICCHARS");
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(chars[i].ToString(), @"^[a-zA-Z ]"))
+                {
+                    txtBx_pName.Text = text.Replace(chars[i], ' ');
+                    lbl_txtBxError.Text = Utility.GetTranslation("EDITP_ERROR_ONLYALPHABETICCHARS");
+                    wronChar = true;
+                }
             }
-            else
+
+            if(!wronChar)
             {
                 lbl_txtBxError.Text = "";
             }
+
 
             if (text.Length > 16) 
             {
