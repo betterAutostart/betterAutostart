@@ -40,8 +40,6 @@ namespace betterAutostart
             this.pnl_hotkeySettings = new System.Windows.Forms.Panel();
             this.lbl_hotkeyStopAll = new System.Windows.Forms.Label();
             this.lbl_hotkeyStartAll = new System.Windows.Forms.Label();
-            this.btn_editStopAllHotkey = new System.Windows.Forms.Button();
-            this.btn_editStartAllHotkey = new System.Windows.Forms.Button();
             this.lbl_stopAllHotkey = new System.Windows.Forms.Label();
             this.lbl_startAllHotkey = new System.Windows.Forms.Label();
             this.lbl_pHotkeySettings = new System.Windows.Forms.Label();
@@ -156,8 +154,6 @@ namespace betterAutostart
             this.pnl_hotkeySettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.pnl_hotkeySettings.Controls.Add(this.lbl_hotkeyStopAll);
             this.pnl_hotkeySettings.Controls.Add(this.lbl_hotkeyStartAll);
-            this.pnl_hotkeySettings.Controls.Add(this.btn_editStopAllHotkey);
-            this.pnl_hotkeySettings.Controls.Add(this.btn_editStartAllHotkey);
             this.pnl_hotkeySettings.Controls.Add(this.lbl_stopAllHotkey);
             this.pnl_hotkeySettings.Controls.Add(this.lbl_startAllHotkey);
             this.pnl_hotkeySettings.Location = new System.Drawing.Point(457, 423);
@@ -187,34 +183,6 @@ namespace betterAutostart
             this.lbl_hotkeyStartAll.TabIndex = 11;
             this.lbl_hotkeyStartAll.Text = "Start all";
             // 
-            // btn_editStopAllHotkey
-            // 
-            this.btn_editStopAllHotkey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btn_editStopAllHotkey.FlatAppearance.BorderSize = 0;
-            this.btn_editStopAllHotkey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editStopAllHotkey.Font = new System.Drawing.Font("Nirmala UI", 10F);
-            this.btn_editStopAllHotkey.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_editStopAllHotkey.Location = new System.Drawing.Point(196, 83);
-            this.btn_editStopAllHotkey.Name = "btn_editStopAllHotkey";
-            this.btn_editStopAllHotkey.Size = new System.Drawing.Size(75, 23);
-            this.btn_editStopAllHotkey.TabIndex = 3;
-            this.btn_editStopAllHotkey.Text = "Edit";
-            this.btn_editStopAllHotkey.UseVisualStyleBackColor = false;
-            // 
-            // btn_editStartAllHotkey
-            // 
-            this.btn_editStartAllHotkey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btn_editStartAllHotkey.FlatAppearance.BorderSize = 0;
-            this.btn_editStartAllHotkey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editStartAllHotkey.Font = new System.Drawing.Font("Nirmala UI", 10F);
-            this.btn_editStartAllHotkey.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_editStartAllHotkey.Location = new System.Drawing.Point(196, 30);
-            this.btn_editStartAllHotkey.Name = "btn_editStartAllHotkey";
-            this.btn_editStartAllHotkey.Size = new System.Drawing.Size(75, 23);
-            this.btn_editStartAllHotkey.TabIndex = 2;
-            this.btn_editStartAllHotkey.Text = "Edit";
-            this.btn_editStartAllHotkey.UseVisualStyleBackColor = false;
-            // 
             // lbl_stopAllHotkey
             // 
             this.lbl_stopAllHotkey.AutoSize = true;
@@ -222,9 +190,9 @@ namespace betterAutostart
             this.lbl_stopAllHotkey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.lbl_stopAllHotkey.Location = new System.Drawing.Point(14, 82);
             this.lbl_stopAllHotkey.Name = "lbl_stopAllHotkey";
-            this.lbl_stopAllHotkey.Size = new System.Drawing.Size(104, 25);
+            this.lbl_stopAllHotkey.Size = new System.Drawing.Size(44, 25);
             this.lbl_stopAllHotkey.TabIndex = 1;
-            this.lbl_stopAllHotkey.Text = "Strg + V+ K";
+            this.lbl_stopAllHotkey.Text = "WIP";
             // 
             // lbl_startAllHotkey
             // 
@@ -233,9 +201,9 @@ namespace betterAutostart
             this.lbl_startAllHotkey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.lbl_startAllHotkey.Location = new System.Drawing.Point(14, 29);
             this.lbl_startAllHotkey.Name = "lbl_startAllHotkey";
-            this.lbl_startAllHotkey.Size = new System.Drawing.Size(105, 25);
+            this.lbl_startAllHotkey.Size = new System.Drawing.Size(44, 25);
             this.lbl_startAllHotkey.TabIndex = 0;
-            this.lbl_startAllHotkey.Text = "Strg + C + J";
+            this.lbl_startAllHotkey.Text = "WIP";
             // 
             // lbl_pHotkeySettings
             // 
@@ -363,10 +331,8 @@ namespace betterAutostart
         private System.Windows.Forms.CheckBox chkBx_autostartWSys;
         private System.Windows.Forms.Panel pnl_hotkeySettings;
         private System.Windows.Forms.Label lbl_pHotkeySettings;
-        private System.Windows.Forms.Button btn_editStartAllHotkey;
         private System.Windows.Forms.Label lbl_stopAllHotkey;
         private System.Windows.Forms.Label lbl_startAllHotkey;
-        private System.Windows.Forms.Button btn_editStopAllHotkey;
         private System.Windows.Forms.Label lbl_hotkeyStopAll;
         private System.Windows.Forms.Label lbl_hotkeyStartAll;
         private System.Windows.Forms.Label lbl_pNameMaxChars;

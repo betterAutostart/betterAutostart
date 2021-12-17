@@ -69,22 +69,22 @@ namespace betterAutostart
         public void SaveProfile(Profile profile, String oldProfileName)
         {
             String filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
+            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
 
             if (File.Exists(filePath))
             {
                 File.Delete(filePath);
             }
-            File.CreateText(filePath).Close();
 
-            
-            String json = JsonConvert.SerializeObject(profile, Formatting.Indented);
-            File.WriteAllText(filePath, json);
-
-            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
             if (File.Exists(oldFilePath))
             {
                 File.Delete(oldFilePath);
             }
+
+            File.CreateText(filePath).Close();
+
+            String json = JsonConvert.SerializeObject(profile, Formatting.Indented);
+            File.WriteAllText(filePath, json);       
         }
 
         private void checkSaveFilePath()

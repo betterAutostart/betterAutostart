@@ -35,8 +35,6 @@ namespace betterAutostart
             this.lbl_pHotkeySettings.Text = Utility.GetTranslation("EDITP_HOTKEYSETTINGS");
             this.lbl_hotkeyStartAll.Text = Utility.GetTranslation("EDITP_HOTKEYSTARTALL");
             this.lbl_hotkeyStopAll.Text = Utility.GetTranslation("EDITP_HOTKEYSTOPALL");
-            this.btn_editStartAllHotkey.Text = Utility.GetTranslation("EDITP_HOTKEYEDIT");
-            this.btn_editStopAllHotkey.Text = Utility.GetTranslation("EDITP_HOTKEYEDIT");
             this.btn_deleteProfile.Text = Utility.GetTranslation("EDITP_DELETEPROFILE");
             this.btn_saveChanges.Text = Utility.GetTranslation("EDITP_SAVEPROFILE");
         }

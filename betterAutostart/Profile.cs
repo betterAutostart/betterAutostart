@@ -19,6 +19,7 @@ namespace betterAutostart
         {
             this.executableApps = new List<ExecutableApp>();
             this.Name = Utility.GetTranslation("PROFILE_DEFAULTNAME");
+            if (this.ShouldAutostart) this.ExecuteAllApps();
         }
 
         public void addNewExecutableApp(String path, String customName = "", bool startAsAdmin = false)
