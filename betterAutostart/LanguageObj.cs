@@ -9,6 +9,9 @@ namespace betterAutostart
     public class Strings
     {
         public string SIDEMENU_PROFILES;
+        public string SIDEMENU_WEBSITE;
+        public string SIDEMENU_WIKI;
+        public string SIDEMENU_SOURCECODE;
         public string SIDEMENU_SETTINGS;
         public string PROFILEP_STARTPROFILE;
         public string PROFILEP_STOPPROFILE;

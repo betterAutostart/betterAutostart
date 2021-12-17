@@ -33,9 +33,9 @@ namespace betterAutostart
             this.pnl_sideMenu = new System.Windows.Forms.Panel();
             this.pnl_navBarHighlight = new System.Windows.Forms.Panel();
             this.btn_sideMenu_settings = new System.Windows.Forms.Button();
-            this.btn_sideMenu_placeholder3 = new System.Windows.Forms.Button();
-            this.btn_sideMenu_placeholder2 = new System.Windows.Forms.Button();
-            this.btn_sideMenu_placeholder1 = new System.Windows.Forms.Button();
+            this.btn_sideMenu_srccode = new System.Windows.Forms.Button();
+            this.btn_sideMenu_wiki = new System.Windows.Forms.Button();
+            this.btn_sideMenu_website = new System.Windows.Forms.Button();
             this.btn_sideMenu_profiles = new System.Windows.Forms.Button();
             this.pnl_sideMenu_logo = new System.Windows.Forms.Panel();
             this.lbl_sideMenuTitle = new System.Windows.Forms.Label();
@@ -51,9 +51,9 @@ namespace betterAutostart
             this.pnl_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnl_sideMenu.Controls.Add(this.pnl_navBarHighlight);
             this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_settings);
-            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_placeholder3);
-            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_placeholder2);
-            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_placeholder1);
+            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_srccode);
+            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_wiki);
+            this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_website);
             this.pnl_sideMenu.Controls.Add(this.btn_sideMenu_profiles);
             this.pnl_sideMenu.Controls.Add(this.pnl_sideMenu_logo);
             resources.ApplyResources(this.pnl_sideMenu, "pnl_sideMenu");
@@ -74,29 +74,32 @@ namespace betterAutostart
             this.btn_sideMenu_settings.UseVisualStyleBackColor = true;
             this.btn_sideMenu_settings.Click += new System.EventHandler(this.btn_sideMenu_settings_Click);
             // 
-            // btn_sideMenu_placeholder3
+            // btn_sideMenu_srccode
             // 
-            resources.ApplyResources(this.btn_sideMenu_placeholder3, "btn_sideMenu_placeholder3");
-            this.btn_sideMenu_placeholder3.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_sideMenu_placeholder3.Name = "btn_sideMenu_placeholder3";
-            this.btn_sideMenu_placeholder3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_sideMenu_srccode, "btn_sideMenu_srccode");
+            this.btn_sideMenu_srccode.FlatAppearance.BorderSize = 0;
+            this.btn_sideMenu_srccode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_sideMenu_srccode.Name = "btn_sideMenu_srccode";
+            this.btn_sideMenu_srccode.UseVisualStyleBackColor = true;
+            this.btn_sideMenu_srccode.Click += new System.EventHandler(this.btn_sideMenu_srccode_Click);
             // 
-            // btn_sideMenu_placeholder2
+            // btn_sideMenu_wiki
             // 
-            resources.ApplyResources(this.btn_sideMenu_placeholder2, "btn_sideMenu_placeholder2");
-            this.btn_sideMenu_placeholder2.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_sideMenu_placeholder2.Name = "btn_sideMenu_placeholder2";
-            this.btn_sideMenu_placeholder2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_sideMenu_wiki, "btn_sideMenu_wiki");
+            this.btn_sideMenu_wiki.FlatAppearance.BorderSize = 0;
+            this.btn_sideMenu_wiki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_sideMenu_wiki.Name = "btn_sideMenu_wiki";
+            this.btn_sideMenu_wiki.UseVisualStyleBackColor = true;
+            this.btn_sideMenu_wiki.Click += new System.EventHandler(this.btn_sideMenu_wiki_Click);
             // 
-            // btn_sideMenu_placeholder1
+            // btn_sideMenu_website
             // 
-            resources.ApplyResources(this.btn_sideMenu_placeholder1, "btn_sideMenu_placeholder1");
-            this.btn_sideMenu_placeholder1.FlatAppearance.BorderSize = 0;
-            this.btn_sideMenu_placeholder1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_sideMenu_placeholder1.Name = "btn_sideMenu_placeholder1";
-            this.btn_sideMenu_placeholder1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_sideMenu_website, "btn_sideMenu_website");
+            this.btn_sideMenu_website.FlatAppearance.BorderSize = 0;
+            this.btn_sideMenu_website.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_sideMenu_website.Name = "btn_sideMenu_website";
+            this.btn_sideMenu_website.UseVisualStyleBackColor = true;
+            this.btn_sideMenu_website.Click += new System.EventHandler(this.btn_sideMenu_website_Click);
             // 
             // btn_sideMenu_profiles
             // 
@@ -168,9 +171,9 @@ namespace betterAutostart
         private System.Windows.Forms.Panel pnl_sideMenu_logo;
         private System.Windows.Forms.Panel pnl_childForm;
         private System.Windows.Forms.Button btn_sideMenu_settings;
-        private System.Windows.Forms.Button btn_sideMenu_placeholder3;
-        private System.Windows.Forms.Button btn_sideMenu_placeholder2;
-        private System.Windows.Forms.Button btn_sideMenu_placeholder1;
+        private System.Windows.Forms.Button btn_sideMenu_srccode;
+        private System.Windows.Forms.Button btn_sideMenu_wiki;
+        private System.Windows.Forms.Button btn_sideMenu_website;
         private System.Windows.Forms.Panel pnl_navBarHighlight;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label lbl_sideMenuTitle;

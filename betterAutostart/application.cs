@@ -44,9 +44,9 @@ namespace betterAutostart
         public void UpdateTranslation() 
         {
             btn_sideMenu_profiles.Text = Utility.GetTranslation("SIDEMENU_PROFILES");
-            btn_sideMenu_placeholder1.Text = Utility.GetTranslation("PLACEHOLDER");
-            btn_sideMenu_placeholder2.Text = Utility.GetTranslation("PLACEHOLDER");
-            btn_sideMenu_placeholder3.Text = Utility.GetTranslation("PLACEHOLDER");
+            btn_sideMenu_website.Text = Utility.GetTranslation("SIDEMENU_WEBSITE");
+            btn_sideMenu_wiki.Text = Utility.GetTranslation("SIDEMENU_WIKI");
+            btn_sideMenu_srccode.Text = Utility.GetTranslation("SIDEMENU_SOURCECODE");
 
             btn_sideMenu_settings.Text = Utility.GetTranslation("SIDEMENU_SETTINGS");
         }
@@ -56,6 +56,21 @@ namespace betterAutostart
             this.HighlightNav(sender);
             this.OpenChildForm(new profilePanel());
             this.lbl_childFormHeader.Text = Utility.GetTranslation("SIDEMENU_PROFILES");
+        }
+
+        private void btn_sideMenu_website_Click(object sender, EventArgs e)
+        {
+            Utility.OpenWebsite("https://betterautostart.com");
+        }
+
+        private void btn_sideMenu_wiki_Click(object sender, EventArgs e)
+        {
+            Utility.OpenWebsite("https://betterautostart.com/wiki");
+        }
+
+        private void btn_sideMenu_srccode_Click(object sender, EventArgs e)
+        {
+            Utility.OpenWebsite("https://betterautostart.com/sourcecode");
         }
 
         private void btn_sideMenu_settings_Click(object sender, EventArgs e)

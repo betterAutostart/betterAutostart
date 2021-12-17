@@ -3,6 +3,9 @@
 	"active": 0,
 	"strings": {
 		"SIDEMENU_PROFILES":"Autostart Profiles",
+		"SIDEMENU_WEBSITE":"Website",
+		"SIDEMENU_WIKI":"Wiki",
+		"SIDEMENU_SOURCECODE":"Sourcecode",
 		"SIDEMENU_SETTINGS":"Settings",
 		"PROFILEP_STARTPROFILE":"Start",
 		"PROFILEP_STOPPROFILE":"Stop",
