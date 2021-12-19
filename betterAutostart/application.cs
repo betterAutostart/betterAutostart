@@ -22,7 +22,7 @@ namespace betterAutostart
             this.Text = "BetterAutostart";
 
             this.UpdateTranslation();
-            Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
+            Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, Width, Height, 6, 6));
             this.btn_sideMenu_profiles_Click((this.btn_sideMenu_profiles as object), null);
         }
 

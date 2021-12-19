@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
+using Microsoft.Win32;
 
 namespace betterAutostart
 {
@@ -89,6 +83,19 @@ namespace betterAutostart
         public static String GetTranslation(String keyword)
         {
             return Config.LangSupport.getTranslation(keyword).ToString();
+        }
+
+        public static void AddAutostartRegistry()
+        {
+            if (Properties.Settings.Default["SelectedLanguage"].ToString() != null && Properties.Settings.Default["SelectedLanguage"].ToString().Equals("False"))
+            {
+                Properties.Settings.Default["SelectedLanguage"] = "True";
+
+                RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                reg.SetValue("betterAutostart", Application.ExecutablePath.ToString());
+
+                Properties.Settings.Default.Save();
+            }
         }
 
     }

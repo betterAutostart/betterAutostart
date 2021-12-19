@@ -180,6 +180,11 @@ namespace betterAutostart
             Config.SaveSystem.SaveProfile(this.selectedProfile, oldName);
             Config.ApplicationForm.OpenAutostartProfilePanel();
             this.Close();
+
+            if (this.chkBx_autostartWSys.Checked)
+            {
+                Utility.AddAutostartRegistry();
+            }
         }
 
         private void btn_deleteProfile_Click(object sender, EventArgs e)
