@@ -260,6 +260,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -324,8 +332,8 @@
         {
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_015E97A4695F443697F30A77F714DFDA"
             {
-            "SourcePath" = "8:C:\\Users\\justu\\Downloads\\betterAutostartIcon.ico"
-            "TargetName" = "8:assets\\betterAutostartIcon.ico"
+            "SourcePath" = "8:..\\betterAutostart\\assets\\betterAutostartIcon.ico"
+            "TargetName" = "8:betterAutostartIcon.ico"
             "Tag" = "8:"
             "Folder" = "8:_C169DBD82FC340F1977DC0E62771B951"
             "Condition" = "8:"
@@ -833,7 +841,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BetterAutostart"
         "ProductCode" = "8:{5306E0EF-104C-4B9F-B957-33602DCEFCAB}"
-        "PackageCode" = "8:{5FD188F2-E0BD-4B03-9AB8-5AD93D5CE14D}"
+        "PackageCode" = "8:{560712B9-29A5-4256-A904-9C338F980A5E}"
         "UpgradeCode" = "8:{73A80BF1-85CD-466C-92EB-F602E8302C76}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -849,7 +857,7 @@
         "ARPCONTACT" = "8:Erijl"
         "Keywords" = "8:Productivity; Opensource"
         "ARPCOMMENTS" = "8:BetterAutostart is a Opensource tool based on your needs."
-        "ARPURLINFOABOUT" = "8:erijl.de"
+        "ARPURLINFOABOUT" = "8:betterautostart.com"
         "ARPPRODUCTICON" = "8:_015E97A4695F443697F30A77F714DFDA"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
