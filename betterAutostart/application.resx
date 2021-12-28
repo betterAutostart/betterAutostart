@@ -348,6 +348,24 @@
   <data name="&gt;&gt;btn_sideMenu_profiles.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lbl_sideMenuTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_sideMenuTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Nirmala UI, 22pt</value>
+  </data>
+  <data name="lbl_sideMenuTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="lbl_sideMenuTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 41</value>
+  </data>
+  <data name="lbl_sideMenuTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbl_sideMenuTitle.Text" xml:space="preserve">
+    <value>Better Autostart</value>
+  </data>
   <data name="&gt;&gt;lbl_sideMenuTitle.Name" xml:space="preserve">
     <value>lbl_sideMenuTitle</value>
   </data>
@@ -407,36 +425,6 @@
   </data>
   <data name="&gt;&gt;pnl_sideMenu.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="lbl_sideMenuTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 22pt</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 41</value>
-  </data>
-  <data name="lbl_sideMenuTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbl_sideMenuTitle.Text" xml:space="preserve">
-    <value>Better Autostart</value>
-  </data>
-  <data name="&gt;&gt;lbl_sideMenuTitle.Name" xml:space="preserve">
-    <value>lbl_sideMenuTitle</value>
-  </data>
-  <data name="&gt;&gt;lbl_sideMenuTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_sideMenuTitle.Parent" xml:space="preserve">
-    <value>pnl_sideMenu_logo</value>
-  </data>
-  <data name="&gt;&gt;lbl_sideMenuTitle.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="pnl_childForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
