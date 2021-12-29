@@ -63,6 +63,7 @@ namespace betterAutostart
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "profilePanel";
             this.Text = "profilePanel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.profilePanel_FormClosing);
             this.ResumeLayout(false);
 
         }

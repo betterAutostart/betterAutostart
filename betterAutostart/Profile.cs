@@ -47,6 +47,11 @@ namespace betterAutostart
                 this.executableApps[i].Kill();
             }
         }
+        
+        public List<ExecutableApp> GetExecutableList()
+        {
+            return this.executableApps;
+        }
 
         public List<String> GetCustomExecutablesList()
         {
@@ -87,5 +92,16 @@ namespace betterAutostart
         {
             this.executableApps.Remove(this.executableApps[index]);
         }
+        
+        public int GetNumberOfRunningExecutables()
+        {
+            int running = 0;
+            for (int i = 0; i < this.executableApps.Count(); i++)
+            {
+                if (this.executableApps[i].IsRunning()) running++;
+            }
+            return running;
+        }
+        
     }
 }

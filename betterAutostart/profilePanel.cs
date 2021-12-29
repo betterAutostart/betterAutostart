@@ -6,25 +6,34 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
+using Timer = System.Timers;
 
 namespace betterAutostart
 {
     public partial class profilePanel : Form
     {
         List<Panel> panels;
+        private Timer.Timer interval;
         public profilePanel()
         {
             InitializeComponent();
 
             panels = new List<Panel>();
-            this.loadAllProfilesToPanel();
+            this.LoadAllProfilesToPanel();
+            
+            interval = new Timer.Timer();
+            this.interval.Elapsed += new ElapsedEventHandler(ElapsedTimerEvent);
+            this.interval.Interval = 1000; // 5sec
+            this.interval.Start();
         }
 
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
             int index = this.getIndexFromButtonName(sender);
             Profile accessedProfile = Config.PHandler.GetProfiles()[index];
+            this.Close();
             editProfilePanel editPnl = new editProfilePanel(accessedProfile);
         }
 
@@ -46,7 +55,8 @@ namespace betterAutostart
             Config.PHandler.AddNewProfile();
 
             List<Profile> profiles = Config.PHandler.GetProfiles();
-            this.createProfilePanel(profiles.Count()-1, profiles[profiles.Count() - 1].Name, profiles[profiles.Count() - 1].GetCustomExecutablesList().ToArray());
+            this.CreateProfilePanel(profiles.Count()-1, profiles[profiles.Count() - 1].Name,
+                profiles[profiles.Count() - 1].GetCustomExecutablesList().ToArray());
         }
         private void lstBx_executables_doubleClick(object sender, EventArgs e)
         {
@@ -70,25 +80,44 @@ namespace betterAutostart
             return int.Parse((sender as ListBox).Name.Split('_')[2]);
         }
 
-        private void loadAllProfilesToPanel()
+        private void LoadAllProfilesToPanel()
         {
             List<Profile> profiles = Config.PHandler.GetProfiles();
             for (int i = 0; i < profiles.Count; i++)
             {
-                this.createProfilePanel(i, profiles[i].Name, profiles[i].GetCustomExecutablesList().ToArray());
+                this.CreateProfilePanel(i, profiles[i].Name, profiles[i].GetCustomExecutablesList().ToArray());
             }
         }
-
-        private void reloadAllProfilesInPanel()
+        
+        private void UpdateExecutablesRunning()
         {
             for (int i = 0; i < this.panels.Count(); i++)
             {
-                this.panels[i].Dispose();
+                string runningExecutableString = 
+                    Utility.GetTranslation("PROFILEP_RUNNING") + 
+                    ": " + 
+                    Config.PHandler.GetProfiles()[i].GetNumberOfRunningExecutables().ToString() + 
+                    "/" + 
+                    Config.PHandler.GetProfiles()[i].GetExecutableList().Count().ToString();
+
+                Label lbl = (Label) this.panels[i].Controls["lbl_runningExec_" + i];
+                lbl.Invoke((Func<Label, string, bool>)SetLabelText, lbl, runningExecutableString);
             }
-            this.loadAllProfilesToPanel();
+        }
+        
+        private bool SetLabelText(Label lbl, string text)
+        {
+            lbl.Text = text;
+            return true;
+        }
+        
+        public void ElapsedTimerEvent(object source, ElapsedEventArgs e)
+        {
+            this.UpdateExecutablesRunning();
+            this.interval.Interval = 5000; // 5sec
         }
 
-        private void createProfilePanel(int index, String profileName, String[] executables)
+        private void CreateProfilePanel(int index, String profileName, String[] executables)
         {
             int fixedLeftOffset = 360;
             int fixedTopOffset = 320;
@@ -107,7 +136,7 @@ namespace betterAutostart
 
             Panel pnl_background = new Panel();
             Label lbl_title = new Label();
-            Label lbl_hotkey = new Label();
+            Label lbl_runningExec = new Label();
             Button btn_startAll = new Button();
             Button btn_stopAll = new Button();
             Button btn_editProfile = new Button();
@@ -122,7 +151,7 @@ namespace betterAutostart
             // BACKGROUND PANEL
             pnl_background.BackColor = Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             pnl_background.Controls.Add(lbl_title);
-            pnl_background.Controls.Add(lbl_hotkey);
+            pnl_background.Controls.Add(lbl_runningExec);
             pnl_background.Controls.Add(btn_startAll);
             pnl_background.Controls.Add(btn_stopAll);
             pnl_background.Controls.Add(btn_editProfile);
@@ -147,18 +176,18 @@ namespace betterAutostart
             pnl_background.Controls.Add(lbl_title);
 
 
-            // HOTKEY LABLE
-            lbl_hotkey.AutoSize = true;
-            lbl_hotkey.Font = new Font("Nirmala UI", 14F);
-            lbl_hotkey.ForeColor = Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            lbl_hotkey.ImeMode = ImeMode.NoControl;
-            lbl_hotkey.Location = new Point(121, 263);
-            lbl_hotkey.Name = "lbl_hotkey_" + index;
-            lbl_hotkey.Size = new Size(86, 25);
-            lbl_hotkey.TabIndex = 5;
-            lbl_hotkey.Text = "Hotkey: /";
-            lbl_hotkey.TextAlign = ContentAlignment.MiddleCenter;
-            pnl_background.Controls.Add(lbl_hotkey);
+            // EXECUTABLES RUNNING LABLE
+            lbl_runningExec.AutoSize = true;
+            lbl_runningExec.Font = new Font("Nirmala UI", 14F);
+            lbl_runningExec.ForeColor = Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            lbl_runningExec.ImeMode = ImeMode.NoControl;
+            lbl_runningExec.Location = new Point(121, 263);
+            lbl_runningExec.Name = "lbl_runningExec_" + index;
+            lbl_runningExec.Size = new Size(74, 25);
+            lbl_runningExec.TabIndex = 5;
+            lbl_runningExec.Text = "";
+            lbl_runningExec.TextAlign = ContentAlignment.MiddleCenter;
+            pnl_background.Controls.Add(lbl_runningExec);
 
 
             // START ALL BUTTON
@@ -239,5 +268,9 @@ namespace betterAutostart
             this.AutoScroll = true;
         }
 
+        private void profilePanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.interval.Stop();
+        }
     }
 }

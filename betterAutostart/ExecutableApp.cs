@@ -85,5 +85,10 @@ namespace betterAutostart
         {
             return this.path;
         }
+        
+        public bool IsRunning()
+        {
+            return this.isRunning;
+        }
     }
 }
