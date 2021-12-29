@@ -28,7 +28,6 @@ namespace betterAutostart
 
             this.btn_settingsBuyMeACoffe.Text = Utility.GetTranslation("SETTINGS_BUYMEACOFEE").ToString();
             this.btn_settings_apply.Text = Utility.GetTranslation("SETTINGS_SAVE").ToString();
-
         }
 
         private void btn_settings_applySettingsClick(object sender, EventArgs e)

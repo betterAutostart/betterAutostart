@@ -33,6 +33,7 @@ namespace betterAutostart
             this.lbl_settings_languages = new System.Windows.Forms.Label();
             this.btn_settings_apply = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_creditsSptB = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_settingsBuyMeACoffe = new System.Windows.Forms.Button();
             this.lbl_creditsDesignE = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace betterAutostart
             this.lbl_creditsDevE = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_credits = new System.Windows.Forms.Label();
-            this.lbl_creditsSptB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@ namespace betterAutostart
             this.drpD_languages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.drpD_languages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.drpD_languages.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.drpD_languages.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.drpD_languages.ForeColor = System.Drawing.Color.Gainsboro;
             this.drpD_languages.FormattingEnabled = true;
             this.drpD_languages.Location = new System.Drawing.Point(12, 35);
             this.drpD_languages.Name = "drpD_languages";
@@ -102,6 +102,18 @@ namespace betterAutostart
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 124);
             this.panel1.TabIndex = 12;
+            // 
+            // lbl_creditsSptB
+            // 
+            this.lbl_creditsSptB.AutoSize = true;
+            this.lbl_creditsSptB.Font = new System.Drawing.Font("Nirmala UI", 13F);
+            this.lbl_creditsSptB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lbl_creditsSptB.Location = new System.Drawing.Point(367, 44);
+            this.lbl_creditsSptB.Name = "lbl_creditsSptB";
+            this.lbl_creditsSptB.Size = new System.Drawing.Size(103, 25);
+            this.lbl_creditsSptB.TabIndex = 19;
+            this.lbl_creditsSptB.Text = "B3njoMusic";
+            this.lbl_creditsSptB.Click += new System.EventHandler(this.lbl_creditsSptB_Click);
             // 
             // label9
             // 
@@ -210,18 +222,6 @@ namespace betterAutostart
             this.lbl_credits.Size = new System.Drawing.Size(74, 25);
             this.lbl_credits.TabIndex = 11;
             this.lbl_credits.Text = "Credits";
-            // 
-            // lbl_creditsSptB
-            // 
-            this.lbl_creditsSptB.AutoSize = true;
-            this.lbl_creditsSptB.Font = new System.Drawing.Font("Nirmala UI", 13F);
-            this.lbl_creditsSptB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lbl_creditsSptB.Location = new System.Drawing.Point(367, 44);
-            this.lbl_creditsSptB.Name = "lbl_creditsSptB";
-            this.lbl_creditsSptB.Size = new System.Drawing.Size(103, 25);
-            this.lbl_creditsSptB.TabIndex = 19;
-            this.lbl_creditsSptB.Text = "B3njoMusic";
-            this.lbl_creditsSptB.Click += new System.EventHandler(this.lbl_creditsSptB_Click);
             // 
             // settings
             // 
