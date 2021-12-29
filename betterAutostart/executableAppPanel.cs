@@ -79,7 +79,7 @@ namespace betterAutostart
             for (int i = 0; i < chars.Count(); i++)
             {
 
-                if (!System.Text.RegularExpressions.Regex.IsMatch(chars[i].ToString(), @"^[a-zA-Z ]"))
+                if (!System.Text.RegularExpressions.Regex.IsMatch(chars[i].ToString(), @"^[a-zA-Z _-]"))
                 {
                     txtBx_eName.Text = text.Replace(chars[i], ' ');
                     lbl_txtBxError.Text = Utility.GetTranslation("EDITP_ERROR_ONLYALPHABETICCHARS");
