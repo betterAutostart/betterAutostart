@@ -16,6 +16,7 @@ namespace betterAutostart
         public string PROFILEP_STARTPROFILE;
         public string PROFILEP_STOPPROFILE;
         public string PROFILEP_EDITPROFILE;
+        public string PROFILEP_RUNNING;
         public string PROFILE_DEFAULTNAME;
         public string EDITP_NAME;
         public string EDITP_MAX16CHARACTERS;
