@@ -352,13 +352,13 @@
     <value>True</value>
   </data>
   <data name="lbl_sideMenuTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 22pt</value>
+    <value>Nirmala UI, 22pt, style=Bold</value>
   </data>
   <data name="lbl_sideMenuTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
+    <value>3, 27</value>
   </data>
   <data name="lbl_sideMenuTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 41</value>
+    <value>248, 41</value>
   </data>
   <data name="lbl_sideMenuTitle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

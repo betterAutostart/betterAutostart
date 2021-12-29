@@ -70,7 +70,7 @@ namespace betterAutostart
 
         private void btn_sideMenu_srccode_Click(object sender, EventArgs e)
         {
-            Utility.OpenWebsite("https://betterautostart.com/sourcecode");
+            Utility.OpenWebsite("https://betterautostart.com/github");
         }
 
         private void btn_sideMenu_settings_Click(object sender, EventArgs e)
