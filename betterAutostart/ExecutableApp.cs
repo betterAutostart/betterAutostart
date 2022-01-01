@@ -20,6 +20,7 @@ namespace betterAutostart
         private Process process;
         private bool isRunning = false;
         private Timer intervalT;
+        private bool killed = false;
 
         public ExecutableApp(String path, String customName, bool executeAsAdmin)
         {
@@ -37,9 +38,9 @@ namespace betterAutostart
         {
             this.isRunning = Utility.IsProgrammRunning(this.path);
 
-            if(!this.isRunning && autoRestart)
+            if(!this.isRunning && autoRestart && !this.killed)
             {
-                this.process = Process.Start(this.path);
+                this.Execute();
             }
         }
 
@@ -48,6 +49,7 @@ namespace betterAutostart
             if (!this.isRunning || this.process == null)
             {
                 this.process = Process.Start(this.path);
+                killed = false;
             }
         }
 
@@ -62,6 +64,7 @@ namespace betterAutostart
                     {
                         this.process.Kill();
                         this.process = null;
+                        this.killed = true;
                     }
                 }
             }
