@@ -190,6 +190,7 @@ namespace betterAutostart
         private void btn_deleteProfile_Click(object sender, EventArgs e)
         {
             Config.PHandler.DeleteProfile(this.selectedProfile);
+            this.Close();
             Config.ApplicationForm.OpenAutostartProfilePanel();
         }
     }
