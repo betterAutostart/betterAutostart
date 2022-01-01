@@ -114,7 +114,6 @@ namespace betterAutostart
         public void ElapsedTimerEvent(object source, ElapsedEventArgs e)
         {
             this.UpdateExecutablesRunning();
-            this.interval.Interval = 5000; // 5sec
         }
 
         private void CreateProfilePanel(int index, String profileName, String[] executables)
@@ -181,7 +180,7 @@ namespace betterAutostart
             lbl_runningExec.Font = new Font("Nirmala UI", 14F);
             lbl_runningExec.ForeColor = Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             lbl_runningExec.ImeMode = ImeMode.NoControl;
-            lbl_runningExec.Location = new Point(121, 263);
+            lbl_runningExec.Location = new Point(112, 263);
             lbl_runningExec.Name = "lbl_runningExec_" + index;
             lbl_runningExec.Size = new Size(74, 25);
             lbl_runningExec.TabIndex = 5;
@@ -270,7 +269,9 @@ namespace betterAutostart
 
         private void profilePanel_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.panels = null;
             this.interval.Stop();
+            this.interval.Close();
         }
     }
 }
