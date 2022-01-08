@@ -29,7 +29,7 @@ namespace betterAutostart
         public void DeleteProfile(Profile p)
         {
             this.profileList = this.profileList.Where(val => val != p).ToList();
-            Config.SaveSystem.SaveProfile(p, p.Name);
+            Config.SaveSystem.DeleteProfile(p, p.Name);
         }
 
         public List<Profile> GetProfiles()

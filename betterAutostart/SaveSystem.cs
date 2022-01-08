@@ -87,6 +87,22 @@ namespace betterAutostart
             File.WriteAllText(filePath, json);       
         }
 
+        public void DeleteProfile(Profile profile, String oldProfileName)
+        {
+            String filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
+            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
+
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+
+            if (File.Exists(oldFilePath))
+            {
+                File.Delete(oldFilePath);
+            }
+        }
+
         private void checkSaveFilePath()
         {
             if(!Directory.Exists(this.saveDirectory))
