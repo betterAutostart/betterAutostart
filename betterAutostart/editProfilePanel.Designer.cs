@@ -48,6 +48,7 @@ namespace betterAutostart
             this.btn_deleteProfile = new System.Windows.Forms.Button();
             this.btn_addNewExecutable = new System.Windows.Forms.Button();
             this.lbl_txtBxError = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             this.pnl_pAttributes.SuspendLayout();
             this.pnl_hotkeySettings.SuspendLayout();
             this.SuspendLayout();
@@ -289,12 +290,30 @@ namespace betterAutostart
             this.lbl_txtBxError.TabIndex = 13;
             this.lbl_txtBxError.Text = "lbl_errBx";
             // 
+            // btn_back
+            // 
+            this.btn_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.btn_back.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_back.Location = new System.Drawing.Point(661, 8);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(78, 25);
+            this.btn_back.TabIndex = 17;
+            this.btn_back.Text = "Back";
+            this.btn_back.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // editProfilePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(751, 605);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lbl_txtBxError);
             this.Controls.Add(this.btn_addNewExecutable);
             this.Controls.Add(this.btn_deleteProfile);
@@ -340,5 +359,6 @@ namespace betterAutostart
         private System.Windows.Forms.Button btn_deleteProfile;
         private System.Windows.Forms.Button btn_addNewExecutable;
         private System.Windows.Forms.Label lbl_txtBxError;
+        private System.Windows.Forms.Button btn_back;
     }
 }

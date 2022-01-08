@@ -37,6 +37,7 @@ namespace betterAutostart
             this.lbl_hotkeyStopAll.Text = Utility.GetTranslation("EDITP_HOTKEYSTOPALL");
             this.btn_deleteProfile.Text = Utility.GetTranslation("EDITP_DELETEPROFILE");
             this.btn_saveChanges.Text = Utility.GetTranslation("EDITP_SAVEPROFILE");
+            this.btn_back.Text = Utility.GetTranslation("EDITP_BACK");
         }
 
         private void init()
@@ -190,6 +191,12 @@ namespace betterAutostart
         private void btn_deleteProfile_Click(object sender, EventArgs e)
         {
             Config.PHandler.DeleteProfile(this.selectedProfile);
+            this.Close();
+            Config.ApplicationForm.OpenAutostartProfilePanel();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
             this.Close();
             Config.ApplicationForm.OpenAutostartProfilePanel();
         }

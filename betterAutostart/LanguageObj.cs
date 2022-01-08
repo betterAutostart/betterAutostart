@@ -35,6 +35,7 @@ namespace betterAutostart
         public string EDITP_DELETEPROFILE;
         public string EDITP_SAVEPROFILE;
         public string EDITP_ERROR_ONLYALPHABETICCHARS;
+        public string EDITP_BACK;
         public string EDITEXEC_NAME;
         public string EDITEXEC_MAX16CHARACTERS;
         public string EDITEXEC_PATHHEADER;

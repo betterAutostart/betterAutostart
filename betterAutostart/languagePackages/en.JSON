@@ -29,6 +29,7 @@
 		"EDITP_DELETEPROFILE": "Delete Profile",
 		"EDITP_SAVEPROFILE": "Save",
 		"EDITP_ERROR_ONLYALPHABETICCHARS": "Only Alphabetic letters",
+		"EDITP_BACK": "Back",
 		"EDITEXEC_NAME": "Name",
 		"EDITEXEC_MAX16CHARACTERS": "max. 16 Characters",
 		"EDITEXEC_PATHHEADER": "Path",
