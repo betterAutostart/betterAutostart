@@ -98,7 +98,6 @@ namespace betterAutostart
             }
         }
 
-        // Add a method that takes in a file ending and decides if its a executable or normal file
         public static bool IsExecutable(String filepath)
         {
             String[] splitPath = filepath.Split(new string[] { "\\" }, StringSplitOptions.None);
