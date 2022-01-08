@@ -35,6 +35,10 @@ namespace betterAutostart
             this.txtBx_eName.Text = this.selectedApp.customName;
             this.lbl_path.Text = this.selectedApp.path;
             this.chkBx_execAsAdmin.Checked = this.selectedApp.executeAsAdmin;
+            if (!Utility.IsExecutable(this.selectedApp.GetPath()))
+            {
+                this.chkBx_autoRestart.Hide();
+            }
         }
 
         private void updateTranslation()

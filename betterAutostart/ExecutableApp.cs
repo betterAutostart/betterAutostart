@@ -17,10 +17,12 @@ namespace betterAutostart
         public String customName = "";
         public bool executeAsAdmin = false;
         public bool autoRestart = false;
+
         private Process process;
         private bool isRunning = false;
         private Timer intervalT;
         private bool killed = false;
+        private int restarts = 0;
 
         public ExecutableApp(String path, String customName, bool executeAsAdmin)
         {
@@ -41,6 +43,14 @@ namespace betterAutostart
             if(!this.isRunning && autoRestart && !this.killed)
             {
                 this.Execute();
+                this.restarts += 2;
+            }
+
+            this.restarts--;
+            if (this.restarts <= 0) this.restarts = 0;
+            if(this.restarts >= 2)
+            {
+                this.intervalT.Stop();
             }
         }
 
