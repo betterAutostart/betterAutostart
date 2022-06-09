@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
+using System.ComponentModel;
 using Newtonsoft.Json;
 
 
@@ -34,10 +35,10 @@ namespace betterAutostart
                 LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJSONFiles[i]));
 
                 languages.Add(tempLang);
-                if (tempLang.active == 1) 
+                if (tempLang.Active == 1) 
                 {
                     possibleLanguages.Add(tempLang);
-                    possibleLanguageNames.Add(tempLang.name);
+                    possibleLanguageNames.Add(tempLang.Name);
                 }
             }
 
@@ -47,7 +48,7 @@ namespace betterAutostart
         {
             try
             {
-                return Config.ActiveLanguage.strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.strings).ToString();
+                return Config.ActiveLanguage.Strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.Strings).ToString();
             }
             catch (Exception e)
             {
@@ -58,7 +59,7 @@ namespace betterAutostart
 
         public LanguageObj GetLanguageByName(String name) 
         {
-            return possibleLanguages.Find(lang => lang.name == name);
+            return possibleLanguages.Find(lang => lang.Name == name);
         }
 
         public List<String> GetPossibleLanguagesNames() 

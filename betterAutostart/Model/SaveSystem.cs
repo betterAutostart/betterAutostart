@@ -23,7 +23,11 @@ namespace betterAutostart
             }
             
             this.checkSaveFilePath();
-            this.allSaveFiles = Directory.GetFiles(this.saveDirectory, this.filePrefix + "*" + this.fileEndingPrefix);
+            this.allSaveFiles = Directory.GetFiles(this.saveDirectory, 
+                this.filePrefix + 
+                "*" + 
+                this.fileEndingPrefix);
+            
             this.LoadAllProfiles();
         }
 

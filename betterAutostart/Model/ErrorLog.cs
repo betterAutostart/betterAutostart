@@ -13,6 +13,8 @@ namespace betterAutostart
         private String fileNamePrefix = "clientLog_";
         private String fileEndingPrefix = ".log";
 
+        private int maxLogFileCount = 9;
+
         public ErrorLog()
         {
             if (Utility.DesignMode)
@@ -36,9 +38,9 @@ namespace betterAutostart
             DirectoryInfo info = new DirectoryInfo(this.errorDirectory);
             FileInfo[] files = info.GetFiles().OrderBy(p => p.CreationTime).ToArray();
 
-            if (files.Length >= 9)
+            if (files.Length >= maxLogFileCount)
             {
-                for (int i = 9; i < files.Length; i++)
+                for (int i = maxLogFileCount; i < files.Length; i++)
                 {
                     files[i].Delete();
                 }
