@@ -54,7 +54,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -122,60 +122,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="application.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="application.Designer.cs">
-      <DependentUpon>application.cs</DependentUpon>
-    </Compile>
-    <Compile Include="editProfilePanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="editProfilePanel.Designer.cs">
-      <DependentUpon>editProfilePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ErrorLog.cs" />
-    <Compile Include="ExecutableApp.cs" />
-    <Compile Include="executableAppPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="executableAppPanel.Designer.cs">
-      <DependentUpon>executableAppPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Profile.cs" />
-    <Compile Include="ProfileHandler.cs" />
-    <Compile Include="profilePanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="profilePanel.Designer.cs">
-      <DependentUpon>profilePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LanguageObj.cs" />
-    <Compile Include="Config.cs" />
-    <Compile Include="LanguageSupport.cs" />
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Common\ProfileClasses\ExecutableApp.cs" />
+    <Compile Include="Common\ProfileClasses\Profile.cs" />
+    <Compile Include="Common\ProfileClasses\ProfileHandler.cs" />
+    <Compile Include="Common\Translation\LanguageObj.cs" />
+    <Compile Include="Common\Translation\LanguageSupport.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Model\ErrorLog.cs" />
+    <Compile Include="Model\SaveSystem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveSystem.cs" />
-    <Compile Include="settings.cs">
+    <Compile Include="View\application.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="settings.Designer.cs">
+    <Compile Include="View\application.Designer.cs">
+      <DependentUpon>application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChildPanel\editProfilePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildPanel\editProfilePanel.Designer.cs">
+      <DependentUpon>editProfilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChildPanel\executableAppPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildPanel\executableAppPanel.Designer.cs">
+      <DependentUpon>executableAppPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChildPanel\profilePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildPanel\profilePanel.Designer.cs">
+      <DependentUpon>profilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChildPanel\settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildPanel\settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="application.resx">
-      <DependentUpon>application.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="editProfilePanel.resx">
-      <DependentUpon>editProfilePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="executableAppPanel.resx">
-      <DependentUpon>executableAppPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="profilePanel.resx">
-      <DependentUpon>profilePanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,7 +173,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="settings.resx">
+    <EmbeddedResource Include="View\application.resx">
+      <DependentUpon>application.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildPanel\editProfilePanel.resx">
+      <DependentUpon>editProfilePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildPanel\executableAppPanel.resx">
+      <DependentUpon>executableAppPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildPanel\profilePanel.resx">
+      <DependentUpon>profilePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildPanel\settings.resx">
       <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="assets\add.png" />
@@ -206,9 +206,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 und x64%29</ProductName>
@@ -222,7 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="betterAutostartIcon.ico" />
-    <Content Include="betterAutostart_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
