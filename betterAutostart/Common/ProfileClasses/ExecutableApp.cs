@@ -8,15 +8,15 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 
 
-namespace betterAutostart
+namespace betterAutostart.Common.ProfileClasses
 {
     [JsonObject]
     public class ExecutableApp
     {
-        public String path = "";
-        public String customName = "";
-        public bool executeAsAdmin = false;
-        public bool autoRestart = false;
+        public String Path { get; set; }
+        public String CustomName { get; set; }
+        public bool ExecuteAsAdmin { get; set; }
+        public bool AutoRestart { get; set; }
 
         private Process process;
         private bool isRunning = false;
@@ -26,9 +26,9 @@ namespace betterAutostart
 
         public ExecutableApp(String path, String customName, bool executeAsAdmin)
         {
-            this.path = path;
-            this.customName = customName;
-            this.executeAsAdmin = executeAsAdmin;
+            this.Path = path;
+            this.CustomName = customName;
+            this.ExecuteAsAdmin = executeAsAdmin;
 
             intervalT = new Timer();
             this.intervalT.Elapsed += new ElapsedEventHandler(ElapsedTimerEvent);
@@ -38,9 +38,9 @@ namespace betterAutostart
 
         public void ElapsedTimerEvent(object source, ElapsedEventArgs e)
         {
-            this.isRunning = Utility.IsProgrammRunning(this.path);
+            this.isRunning = Utility.IsProgrammRunning(this.Path);
 
-            if(!this.isRunning && autoRestart && !this.killed)
+            if(!this.isRunning && this.AutoRestart && !this.killed)
             {
                 this.Execute();
                 this.restarts += 2;
@@ -58,7 +58,7 @@ namespace betterAutostart
         {
             if (!this.isRunning || this.process == null)
             {
-                this.process = Process.Start(this.path);
+                this.process = Process.Start(this.Path);
                 killed = false;
             }
         }
@@ -86,17 +86,12 @@ namespace betterAutostart
 
         public String GetExecutableCustomName()
         {
-            if (this.customName == "")
+            if (this.CustomName == "")
             {
-                String[] splitPath = this.path.Split(new string[] { "\\" }, StringSplitOptions.None);
+                String[] splitPath = this.Path.Split(new string[] { "\\" }, StringSplitOptions.None);
                 return splitPath[splitPath.Length - 1];
             }
-            return this.customName;
-        }
-
-        public String GetPath()
-        {
-            return this.path;
+            return this.CustomName;
         }
         
         public bool IsRunning()

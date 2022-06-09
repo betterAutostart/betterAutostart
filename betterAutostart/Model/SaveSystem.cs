@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
+using betterAutostart.Common.ProfileClasses;
 
 namespace betterAutostart
 {
@@ -60,9 +61,9 @@ namespace betterAutostart
                 model.Name = allProfiles[i].Name;
                 model.Active = allProfiles[i].Active;
                 model.ShouldAutostart = allProfiles[i].ShouldAutostart;
-                model.executableApps = new List<ExecutableApp>
+                model.ExecutableApps = new List<ExecutableApp>
                 {
-                    allProfiles[i].executableApps[0]
+                    allProfiles[i].ExecutableApps[0]
                 };
 
                 String json = JsonConvert.SerializeObject(model, Formatting.Indented);

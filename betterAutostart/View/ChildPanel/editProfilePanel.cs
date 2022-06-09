@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using betterAutostart.Common.ProfileClasses;
 
 namespace betterAutostart
 {
@@ -93,7 +94,7 @@ namespace betterAutostart
             int selectedIndex = this.lstBx_pExecutables.SelectedIndex;
             if (selectedIndex >= 0 && selectedIndex < this.selectedProfile.GetEditableExecutablesList().Count())
             {
-                Utility.ExploreFile(this.selectedProfile.GetExecutableByIndex(selectedIndex).GetPath());
+                Utility.ExploreFile(this.selectedProfile.GetExecutableByIndex(selectedIndex).Path);
             }
         }
 
@@ -131,7 +132,7 @@ namespace betterAutostart
 
             if (filePath != "")
             {
-                this.selectedProfile.addNewExecutableApp(filePath);
+                this.selectedProfile.AddNewExecutableApp(filePath);
                 this.reloadListBox();
             }
         }

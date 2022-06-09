@@ -4,62 +4,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using betterAutostart.Common.ProfileClasses;
 
-namespace betterAutostart
+namespace betterAutostart.Common.ProfileClasses
 {
     public class Profile
     {
-        public String Name; // Individual Name important for saveSystem
-        public bool Active = false;
-        public bool ShouldAutostart = false;
-        public bool ExecuteAsAdmin = false;
-        public List<ExecutableApp> executableApps;
+        public String Name { get; set; } // Individual Name important for saveSystem
+        public bool Active { get; set; }
+        public bool ShouldAutostart { get; set; }
+        public bool ExecuteAsAdmin { get; set; }
+        public List<ExecutableApp> ExecutableApps { get; set; }
 
         public Profile()
         {
-            this.executableApps = new List<ExecutableApp>();
             this.Name = Utility.GetTranslation("PROFILE_DEFAULTNAME");
-            if (this.ShouldAutostart) this.ExecuteAllApps();
+            this.Active = false;
+            this.ShouldAutostart = false;
+            this.ExecuteAsAdmin = false;
+            this.ExecutableApps = new List<ExecutableApp>();
+
+            if (this.ShouldAutostart)
+            {
+                this.ExecuteAllApps();
+            }
         }
 
-        public void addNewExecutableApp(String path, String customName = "", bool startAsAdmin = false)
+        public void AddNewExecutableApp(String path, String customName = "", bool startAsAdmin = false)
         {
-            this.executableApps.Add(new ExecutableApp(path, customName, startAsAdmin));
+            this.ExecutableApps.Add(new ExecutableApp(path, customName, startAsAdmin));
         }
 
         public void ExecuteApp(int index)
         {
-            this.executableApps[index].Execute();
+            this.ExecutableApps[index].Execute();
         }
 
         public void ExecuteAllApps()
         {
-            for(int i = 0; i < this.executableApps.Count(); i++)
+            for(int i = 0; i < this.ExecutableApps.Count(); i++)
             {
-                this.executableApps[i].Execute();
+                this.ExecutableApps[i].Execute();
             }
         }
 
-        public void stopProfile()
+        public void StopProfile()
         {
-            for (int i = 0; i < this.executableApps.Count(); i++)
+            for (int i = 0; i < this.ExecutableApps.Count(); i++)
             {
-                this.executableApps[i].Kill();
+                this.ExecutableApps[i].Kill();
             }
         }
         
         public List<ExecutableApp> GetExecutableList()
         {
-            return this.executableApps;
+            return this.ExecutableApps;
         }
 
         public List<String> GetCustomExecutablesList()
         {
             List<String> executables = new List<String>();
 
-            for(int i = 0; i < this.executableApps.Count(); i++)
+            for(int i = 0; i < this.ExecutableApps.Count(); i++)
             {
-                executables.Add(this.executableApps[i].GetExecutableCustomName());
+                executables.Add(this.ExecutableApps[i].GetExecutableCustomName());
             }
             return executables;
         }
@@ -68,37 +76,37 @@ namespace betterAutostart
         {
             List<String> executables = new List<String>();
 
-            for (int i = 0; i < this.executableApps.Count(); i++)
+            for (int i = 0; i < this.ExecutableApps.Count(); i++)
             {
-                executables.Add(this.executableApps[i].GetExecutableCustomName() + " (" + this.executableApps[i].GetPath() + ")");
+                executables.Add(this.ExecutableApps[i].GetExecutableCustomName() + " (" + this.ExecutableApps[i].Path + ")");
             }
             return executables;
         }
 
         public ExecutableApp GetExecutableByIndex(int index)
         {
-            if ((this.executableApps.Count() - 1) < index) return null;
-            return this.executableApps[index];
+            if ((this.ExecutableApps.Count() - 1) < index) return null;
+            return this.ExecutableApps[index];
         }
 
         public void DeleteExecutable(ExecutableApp app)
         {
             if (app == null) return;
-            this.executableApps = this.executableApps.Where(val => val != app).ToList();
+            this.ExecutableApps = this.ExecutableApps.Where(val => val != app).ToList();
             Config.SaveSystem.SaveProfile(this, this.Name);
         }
 
         public void RemoveExecutableByIndex(int index)
         {
-            this.executableApps.Remove(this.executableApps[index]);
+            this.ExecutableApps.Remove(this.ExecutableApps[index]);
         }
         
         public int GetNumberOfRunningExecutables()
         {
             int running = 0;
-            for (int i = 0; i < this.executableApps.Count(); i++)
+            for (int i = 0; i < this.ExecutableApps.Count(); i++)
             {
-                if (this.executableApps[i].IsRunning()) running++;
+                if (this.ExecutableApps[i].IsRunning()) running++;
             }
             return running;
         }

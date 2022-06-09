@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
+using betterAutostart.Common.ProfileClasses;
 using Timer = System.Timers;
 
 namespace betterAutostart
@@ -48,7 +49,7 @@ namespace betterAutostart
         {
             int index = this.getIndexFromButtonName(sender);
             Profile accessedProfile = Config.PHandler.GetProfiles()[index];
-            accessedProfile.stopProfile();
+            accessedProfile.StopProfile();
         }
         private void btn_addBlankProfile_Click(object sender, EventArgs e)
         {
@@ -66,7 +67,7 @@ namespace betterAutostart
             {
                 List<Profile> profiles = Config.PHandler.GetProfiles();
                 ExecutableApp eApp = profiles[lstBx_index].GetExecutableByIndex(index);
-                Utility.ExploreFile(eApp.GetPath());
+                Utility.ExploreFile(eApp.Path);
             }
         }
 

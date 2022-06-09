@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using betterAutostart.Common.ProfileClasses;
 
 namespace betterAutostart
 {
@@ -32,10 +33,10 @@ namespace betterAutostart
             Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
             this.pnl_background.Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, this.pnl_background.Width, this.pnl_background.Height, 12, 12));
 
-            this.txtBx_eName.Text = this.selectedApp.customName;
-            this.lbl_path.Text = this.selectedApp.path;
-            this.chkBx_execAsAdmin.Checked = this.selectedApp.executeAsAdmin;
-            if (!Utility.IsExecutable(this.selectedApp.GetPath()))
+            this.txtBx_eName.Text = this.selectedApp.CustomName;
+            this.lbl_path.Text = this.selectedApp.Path;
+            this.chkBx_execAsAdmin.Checked = this.selectedApp.ExecuteAsAdmin;
+            if (!Utility.IsExecutable(this.selectedApp.Path))
             {
                 this.chkBx_autoRestart.Hide();
             }
@@ -139,10 +140,10 @@ namespace betterAutostart
 
         private void btn_saveChanges_Click(object sender, EventArgs e)
         {
-            this.selectedApp.customName = this.txtBx_eName.Text;
-            this.selectedApp.path = this.lbl_path.Text;
-            this.selectedApp.autoRestart = this.chkBx_autoRestart.Checked;
-            this.selectedApp.executeAsAdmin = this.chkBx_execAsAdmin.Checked;
+            this.selectedApp.CustomName = this.txtBx_eName.Text;
+            this.selectedApp.Path = this.lbl_path.Text;
+            this.selectedApp.AutoRestart = this.chkBx_autoRestart.Checked;
+            this.selectedApp.ExecuteAsAdmin = this.chkBx_execAsAdmin.Checked;
 
             this.Close();
         }

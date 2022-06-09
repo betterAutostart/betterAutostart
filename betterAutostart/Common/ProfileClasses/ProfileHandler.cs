@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;   
 
-namespace betterAutostart
+namespace betterAutostart.Common.ProfileClasses
 {
     class ProfileHandler
     {
-        List<Profile> profileList;
+        private List<Profile> profileList;
 
         public ProfileHandler()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Diagnostics;
+using betterAutostart.Common.ProfileClasses;
 
 namespace betterAutostart
 {
