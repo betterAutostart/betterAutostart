@@ -28,7 +28,7 @@ namespace betterAutostart
             this.Text = "BetterAutostart";
             Utility.SetIcon(this);
 
-            this.updateTranslation();
+            this.UpdateTranslation();
 
             Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
             this.pnl_background.Region = Region.FromHrgn(Utility.CreateRoundRectRgn(0, 0, this.pnl_background.Width, this.pnl_background.Height, 12, 12));
@@ -42,17 +42,17 @@ namespace betterAutostart
             }
         }
 
-        private void updateTranslation()
+        private void UpdateTranslation()
         {
-            this.lbl_eName.Text = Utility.GetTranslation("EDITEXEC_NAME");
-            this.lbl_eNameMaxChars.Text = Utility.GetTranslation("EDITEXEC_NAME");
-            this.lbl_pathHeader.Text = Utility.GetTranslation("EDITEXEC_PATHHEADER");
-            this.btn_editPath.Text = Utility.GetTranslation("EDITEXEC_EDITPATH");
-            this.lbl_eAttributes.Text = Utility.GetTranslation("EDITEXEC_ATTRIBUTEHEADER");
-            this.chkBx_execAsAdmin.Text = Utility.GetTranslation("EDITEXEC_EXECASADMIN");
-            this.btn_deleteExecutableApp.Text = Utility.GetTranslation("EDITEXEC_DELETEEXECAPP");
-            this.btn_saveChanges.Text = Utility.GetTranslation("EDITEXEC_SAVEEXECAPP");
-            this.chkBx_autoRestart.Text = Utility.GetTranslation("EDITEXEC_AUTORESTART");
+            this.lbl_eName.Text = Config.ActiveLanguage.Strings.EditExecName;
+            this.lbl_eNameMaxChars.Text = Config.ActiveLanguage.Strings.EditExecName;
+            this.lbl_pathHeader.Text = Config.ActiveLanguage.Strings.EditExecPathHeader;
+            this.btn_editPath.Text = Config.ActiveLanguage.Strings.EditExecEditPath;
+            this.lbl_eAttributes.Text = Config.ActiveLanguage.Strings.EditExecAttributeHeader;
+            this.chkBx_execAsAdmin.Text = Config.ActiveLanguage.Strings.EditExecExecAsAdmin;
+            this.btn_deleteExecutableApp.Text = Config.ActiveLanguage.Strings.EditExecDeleteExecApp;
+            this.btn_saveChanges.Text = Config.ActiveLanguage.Strings.EditExecSaveExecApp;
+            this.chkBx_autoRestart.Text = Config.ActiveLanguage.Strings.EditExecAutostart;
         }
         
         protected override void WndProc(ref Message m)
@@ -87,7 +87,7 @@ namespace betterAutostart
                 if (!System.Text.RegularExpressions.Regex.IsMatch(chars[i].ToString(), @"^[a-zA-Z _-]"))
                 {
                     txtBx_eName.Text = text.Replace(chars[i], ' ');
-                    lbl_txtBxError.Text = Utility.GetTranslation("EDITP_ERROR_ONLYALPHABETICCHARS");
+                    lbl_txtBxError.Text = Config.ActiveLanguage.Strings.EditPErrorOnlyAlphabeticChars;
                     wronChar = true;
                 }
             }

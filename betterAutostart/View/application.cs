@@ -43,19 +43,19 @@ namespace betterAutostart
 
         public void UpdateTranslation() 
         {
-            btn_sideMenu_profiles.Text = Utility.GetTranslation("SIDEMENU_PROFILES");
-            btn_sideMenu_website.Text = Utility.GetTranslation("SIDEMENU_WEBSITE");
-            btn_sideMenu_wiki.Text = Utility.GetTranslation("SIDEMENU_WIKI");
-            btn_sideMenu_srccode.Text = Utility.GetTranslation("SIDEMENU_SOURCECODE");
+            btn_sideMenu_profiles.Text = Config.ActiveLanguage.Strings.SideMenuProfiles;
+            btn_sideMenu_website.Text = Config.ActiveLanguage.Strings.SideMenuWebsite;
+            btn_sideMenu_wiki.Text = Config.ActiveLanguage.Strings.SideMenuWiki;
+            btn_sideMenu_srccode.Text = Config.ActiveLanguage.Strings.SideMenuSourceCode;
 
-            btn_sideMenu_settings.Text = Utility.GetTranslation("SIDEMENU_SETTINGS");
+            btn_sideMenu_settings.Text = Config.ActiveLanguage.Strings.SideMenuSettings;
         }
 
         private void btn_sideMenu_profiles_Click(object sender, EventArgs e)
         {
             this.HighlightNav(sender);
             this.OpenChildForm(new profilePanel());
-            this.lbl_childFormHeader.Text = Utility.GetTranslation("SIDEMENU_PROFILES");
+            this.lbl_childFormHeader.Text = Config.ActiveLanguage.Strings.SideMenuProfiles;
         }
 
         private void btn_sideMenu_website_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace betterAutostart
         {
             this.HighlightNav(sender);
             this.OpenChildForm(new settings());
-            this.lbl_childFormHeader.Text = Utility.GetTranslation("SIDEMENU_SETTINGS");
+            this.lbl_childFormHeader.Text = Config.ActiveLanguage.Strings.SideMenuSettings;
         }
 
         public void OpenAutostartProfilePanel()

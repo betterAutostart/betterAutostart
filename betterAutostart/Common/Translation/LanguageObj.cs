@@ -162,7 +162,7 @@ namespace betterAutostart
         public string SettingsBuyMeACoffee { get; set; }
 
         [JsonProperty("SETTINGS_SAVE")]
-        public string SettingsSace { get; set; }
+        public string SettingsSave { get; set; }
 
         [JsonProperty("PLACEHOLDER")]
         public string Placeholder { get; set; }

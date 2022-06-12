@@ -24,10 +24,10 @@ namespace betterAutostart
 
         private void UpdateTranslation()
         {
-            lbl_settings_languages.Text = Utility.GetTranslation("SETTINGS_LANGUAGE").ToString();
+            lbl_settings_languages.Text = Config.ActiveLanguage.Strings.SettingsLanguage;
 
-            this.btn_settingsBuyMeACoffe.Text = Utility.GetTranslation("SETTINGS_BUYMEACOFEE").ToString();
-            this.btn_settings_apply.Text = Utility.GetTranslation("SETTINGS_SAVE").ToString();
+            this.btn_settingsBuyMeACoffe.Text = Config.ActiveLanguage.Strings.SettingsBuyMeACoffee;
+            this.btn_settings_apply.Text = Config.ActiveLanguage.Strings.SettingsSave;
         }
 
         private void btn_settings_applySettingsClick(object sender, EventArgs e)

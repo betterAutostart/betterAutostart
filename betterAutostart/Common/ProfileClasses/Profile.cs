@@ -18,7 +18,7 @@ namespace betterAutostart.Common.ProfileClasses
 
         public Profile()
         {
-            this.Name = Utility.GetTranslation("PROFILE_DEFAULTNAME");
+            this.Name = Config.ActiveLanguage.Strings.ProfileDefaultName;
             this.Active = false;
             this.ShouldAutostart = false;
             this.ExecuteAsAdmin = false;

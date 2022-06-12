@@ -15,7 +15,7 @@ namespace betterAutostart
 {
     public partial class profilePanel : Form
     {
-        List<Panel> panels;
+        private List<Panel> panels;
         private Timer.Timer interval;
         public profilePanel()
         {
@@ -61,12 +61,12 @@ namespace betterAutostart
         }
         private void lstBx_executables_doubleClick(object sender, EventArgs e)
         {
-            int lstBx_index = this.getIndexFromListBoxName(sender);
+            int lstBxIndex = this.getIndexFromListBoxName(sender);
             int index = (sender as ListBox).IndexFromPoint((e as MouseEventArgs).Location);
             if (index != ListBox.NoMatches)
             {
                 List<Profile> profiles = Config.PHandler.GetProfiles();
-                ExecutableApp eApp = profiles[lstBx_index].GetExecutableByIndex(index);
+                ExecutableApp eApp = profiles[lstBxIndex].GetExecutableByIndex(index);
                 Utility.ExploreFile(eApp.Path);
             }
         }
@@ -95,7 +95,7 @@ namespace betterAutostart
             for (int i = 0; i < this.panels.Count(); i++)
             {
                 string runningExecutableString = 
-                    Utility.GetTranslation("PROFILEP_RUNNING") + 
+                    Config.ActiveLanguage.Strings.ProfilePRunning + 
                     ": " + 
                     Config.PHandler.GetProfiles()[i].GetNumberOfRunningExecutables().ToString() + 
                     "/" + 
@@ -201,7 +201,7 @@ namespace betterAutostart
             btn_startAll.Name = "btn_startAll_" + index;
             btn_startAll.Size = new Size(142, 39);
             btn_startAll.TabIndex = 2;
-            btn_startAll.Text = Utility.GetTranslation("PROFILEP_STARTPROFILE");
+            btn_startAll.Text = Config.ActiveLanguage.Strings.ProfilePStartProfile;
             btn_startAll.UseVisualStyleBackColor = false;
             btn_startAll.Click += new EventHandler(this.btn_startProfile_Click);
             pnl_background.Controls.Add(btn_startAll);
@@ -218,7 +218,7 @@ namespace betterAutostart
             btn_stopAll.Name = "btn_stopAll_" + index;
             btn_stopAll.Size = new Size(142, 39);
             btn_stopAll.TabIndex = 3;
-            btn_stopAll.Text = Utility.GetTranslation("PROFILEP_STOPPROFILE");
+            btn_stopAll.Text = Config.ActiveLanguage.Strings.ProfilePStopProfile;
             btn_stopAll.UseVisualStyleBackColor = false;
             btn_stopAll.Click += new EventHandler(this.btn_stopProfile_Click);
             pnl_background.Controls.Add(btn_stopAll);
@@ -235,7 +235,7 @@ namespace betterAutostart
             btn_editProfile.Name= "btn_editProfile_" + index;
             btn_editProfile.Size = new Size(91, 29);
             btn_editProfile.TabIndex = 4;
-            btn_editProfile.Text = Utility.GetTranslation("PROFILEP_EDITPROFILE");
+            btn_editProfile.Text = Config.ActiveLanguage.Strings.ProfilePEditProfile;
             btn_editProfile.UseVisualStyleBackColor = false;
             btn_editProfile.Click += new EventHandler(this.btn_editProfile_Click);
             pnl_background.Controls.Add(btn_editProfile);

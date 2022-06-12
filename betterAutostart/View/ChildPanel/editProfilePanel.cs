@@ -20,28 +20,28 @@ namespace betterAutostart
         {
             InitializeComponent();
             selectedProfile = profile;
-            this.init();
-            this.updateTranslation();
+            this.Init();
+            this.UpdateTranslation();
         }
 
-        private void updateTranslation()
+        private void UpdateTranslation()
         {
-            this.lbl_pName.Text = Utility.GetTranslation("EDITP_NAME");
-            this.lbl_pNameMaxChars.Text = Utility.GetTranslation("EDITP_MAX16CHARACTERS");
-            this.lbl_pExecutables.Text = Utility.GetTranslation("EDITP_EXECUTABLELIST");
-            this.btn_addNewExecutable.Text = Utility.GetTranslation("EDITP_ADDNEWEXECUTABLE");
-            this.lbl_pAttributes.Text = Utility.GetTranslation("EDITP_ATTRIBUTES");
-            this.chkBx_autostartWSys.Text = Utility.GetTranslation("EDITP_AUTOSTARTWITHSYSTEM");
-            this.chkBx_execAsAdmin.Text = Utility.GetTranslation("EDITP_EXECUTEASADMIN");
-            this.lbl_pHotkeySettings.Text = Utility.GetTranslation("EDITP_HOTKEYSETTINGS");
-            this.lbl_hotkeyStartAll.Text = Utility.GetTranslation("EDITP_HOTKEYSTARTALL");
-            this.lbl_hotkeyStopAll.Text = Utility.GetTranslation("EDITP_HOTKEYSTOPALL");
-            this.btn_deleteProfile.Text = Utility.GetTranslation("EDITP_DELETEPROFILE");
-            this.btn_saveChanges.Text = Utility.GetTranslation("EDITP_SAVEPROFILE");
-            this.btn_back.Text = Utility.GetTranslation("EDITP_BACK");
+            this.lbl_pName.Text = Config.ActiveLanguage.Strings.EditPName;
+            this.lbl_pNameMaxChars.Text = Config.ActiveLanguage.Strings.EditPMax16Characters;
+            this.lbl_pExecutables.Text = Config.ActiveLanguage.Strings.EditPExecutableList;
+            this.btn_addNewExecutable.Text = Config.ActiveLanguage.Strings.EditPAddNewExecutable;
+            this.lbl_pAttributes.Text = Config.ActiveLanguage.Strings.EditPAttributes;
+            this.chkBx_autostartWSys.Text = Config.ActiveLanguage.Strings.EditPAutostartWithSystem;
+            this.chkBx_execAsAdmin.Text = Config.ActiveLanguage.Strings.EditPExecuteAsAdmin;
+            this.lbl_pHotkeySettings.Text = Config.ActiveLanguage.Strings.EditPHotkeySettings;
+            this.lbl_hotkeyStartAll.Text = Config.ActiveLanguage.Strings.EditPHotkeyStartAll;
+            this.lbl_hotkeyStopAll.Text = Config.ActiveLanguage.Strings.EditPHotkeyStopAll;
+            this.btn_deleteProfile.Text = Config.ActiveLanguage.Strings.EditPDeleteProfile;
+            this.btn_saveChanges.Text = Config.ActiveLanguage.Strings.EditPSaveProfile;
+            this.btn_back.Text = Config.ActiveLanguage.Strings.EditPBack;
         }
 
-        private void init()
+        private void Init()
         {
             this.txtBx_pName.Text = this.selectedProfile.Name;
             this.lstBx_pExecutables.Items.AddRange(this.selectedProfile.GetEditableExecutablesList().ToArray());
@@ -63,20 +63,20 @@ namespace betterAutostart
                 if (this.lstBx_pExecutables.SelectedIndex >= 0 && this.lstBx_pExecutables.SelectedIndex < this.selectedProfile.GetEditableExecutablesList().Count())
                 {
                     listboxContextMenu = new ContextMenuStrip();
-                    this.generateContextMenu(listboxContextMenu);
+                    this.GenerateContextMenu(listboxContextMenu);
 
                     listboxContextMenu.Show(Cursor.Position);
                 }
             }
         }
 
-        private void generateContextMenu(ContextMenuStrip listboxContextMenu)
+        private void GenerateContextMenu(ContextMenuStrip listboxContextMenu)
         {
             this.listboxContextMenu.Items.Clear();
-            this.listboxContextMenu.Items.Add(Utility.GetTranslation("EDITP_LSTBXCONTEXTM_EDIT"), null, new EventHandler(listBxContextMenu_editEntry));
-            this.listboxContextMenu.Items.Add(Utility.GetTranslation("EDITP_LSTBXCONTEXTM_OPENINEXPLORER"), null, new EventHandler(listBxContextMenu_openEntryInExplorer));
+            this.listboxContextMenu.Items.Add(Config.ActiveLanguage.Strings.EditPLstbxContextMenuEdit, null, new EventHandler(listBxContextMenu_editEntry));
+            this.listboxContextMenu.Items.Add(Config.ActiveLanguage.Strings.EditPLstbxContextMenuOpenInExplorer, null, new EventHandler(listBxContextMenu_openEntryInExplorer));
             this.listboxContextMenu.Items.Add("-");
-            this.listboxContextMenu.Items.Add(Utility.GetTranslation("EDITP_LSTBXCONTEXTM_REMOVE"), null, new EventHandler(this.listBxContextMenu_deleteEntry));
+            this.listboxContextMenu.Items.Add(Config.ActiveLanguage.Strings.EditPLstbxContextMenuRemove, null, new EventHandler(this.listBxContextMenu_deleteEntry));
         }
 
         private void listBxContextMenu_deleteEntry(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace betterAutostart
             if (selectedIndex >= 0 && selectedIndex < this.selectedProfile.GetEditableExecutablesList().Count())
             {
                 this.selectedProfile.RemoveExecutableByIndex(selectedIndex);
-                this.reloadListBox();
+                this.ReloadListBox();
             }
         }
 
@@ -111,7 +111,7 @@ namespace betterAutostart
 
         private void onEditExecPanelClose(object sender, EventArgs e)
         {
-            this.reloadListBox();
+            this.ReloadListBox();
         }
 
         private void btn_addNewExecutable_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace betterAutostart
             if (filePath != "")
             {
                 this.selectedProfile.AddNewExecutableApp(filePath);
-                this.reloadListBox();
+                this.ReloadListBox();
             }
         }
 
@@ -150,7 +150,7 @@ namespace betterAutostart
                 if (!System.Text.RegularExpressions.Regex.IsMatch(chars[i].ToString(), @"^[a-zA-Z _-]"))
                 {
                     txtBx_pName.Text = text.Replace(chars[i], ' ');
-                    lbl_txtBxError.Text = Utility.GetTranslation("EDITP_ERROR_ONLYALPHABETICCHARS");
+                    lbl_txtBxError.Text = Config.ActiveLanguage.Strings.EditPErrorOnlyAlphabeticChars;
                     wronChar = true;
                 }
             }
@@ -167,7 +167,7 @@ namespace betterAutostart
             }
         }
 
-        private void reloadListBox()
+        private void ReloadListBox()
         {
             this.lstBx_pExecutables.Items.Clear();
             this.lstBx_pExecutables.Items.AddRange(this.selectedProfile.GetEditableExecutablesList().ToArray());

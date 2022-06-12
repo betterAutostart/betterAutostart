@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.ComponentModel;
+using System.Reflection;
 using Newtonsoft.Json;
 
 
@@ -13,26 +14,26 @@ namespace betterAutostart
 {
     class LanguageSupport
     {
-        private String[] allLanguageJSONFiles;
+        private string[] allLanguageJsonFiles;
         private List<LanguageObj> languages = new List<LanguageObj>();
         private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
-        private List<String> possibleLanguageNames = new List<String>();
+        private List<string> possibleLanguageNames = new List<String>();
 
 
         public void LoadAllLanguages()
         {
             if (Utility.DesignMode)
             {
-                this.allLanguageJSONFiles = Directory.GetFiles("./../../languagePackages");
+                this.allLanguageJsonFiles = Directory.GetFiles("./../../languagePackages");
             }
             else
             {
-                this.allLanguageJSONFiles = Directory.GetFiles("./languagePackages");
+                this.allLanguageJsonFiles = Directory.GetFiles("./languagePackages");
             }
             
-            for (int i = 0; i < this.allLanguageJSONFiles.Length; i++)
+            for (int i = 0; i < this.allLanguageJsonFiles.Length; i++)
             {
-                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJSONFiles[i]));
+                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJsonFiles[i]));
 
                 languages.Add(tempLang);
                 if (tempLang.Active == 1) 
@@ -44,25 +45,12 @@ namespace betterAutostart
 
         }
 
-        public Object getTranslation(String property)
-        {
-            try
-            {
-                return Config.ActiveLanguage.Strings.GetType().GetField(property).GetValue(Config.ActiveLanguage.Strings).ToString();
-            }
-            catch (Exception e)
-            {
-                Config.ErrorLog.LogError(e);
-                return "Not found";
-            }
-        }
-
-        public LanguageObj GetLanguageByName(String name) 
+        public LanguageObj GetLanguageByName(string name) 
         {
             return possibleLanguages.Find(lang => lang.Name == name);
         }
 
-        public List<String> GetPossibleLanguagesNames() 
+        public List<string> GetPossibleLanguagesNames() 
         {
             return possibleLanguageNames;
         }
