@@ -61,9 +61,9 @@ namespace betterAutostart.Common.ProfileClasses
             return this.ExecutableApps;
         }
 
-        public List<String> GetCustomExecutablesList()
+        public List<string> GetCustomExecutablesList()
         {
-            List<String> executables = new List<String>();
+            List<string> executables = new List<string>();
 
             for(int i = 0; i < this.ExecutableApps.Count(); i++)
             {
@@ -72,9 +72,9 @@ namespace betterAutostart.Common.ProfileClasses
             return executables;
         }
 
-        public List<String> GetEditableExecutablesList()
+        public List<string> GetEditableExecutablesList()
         {
-            List<String> executables = new List<String>();
+            List<string> executables = new List<string>();
 
             for (int i = 0; i < this.ExecutableApps.Count(); i++)
             {

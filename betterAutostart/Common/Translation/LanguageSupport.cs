@@ -17,7 +17,7 @@ namespace betterAutostart
         private string[] allLanguageJsonFiles;
         private List<LanguageObj> languages = new List<LanguageObj>();
         private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
-        private List<string> possibleLanguageNames = new List<String>();
+        private List<string> possibleLanguageNames = new List<string>();
 
 
         public void LoadAllLanguages()
