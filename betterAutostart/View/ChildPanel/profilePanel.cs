@@ -117,7 +117,7 @@ namespace betterAutostart
             this.UpdateExecutablesRunning();
         }
 
-        private void CreateProfilePanel(int index, String profileName, String[] executables)
+        private void CreateProfilePanel(int index, string profileName, string[] executables)
         {
             int fixedLeftOffset = 360;
             int fixedTopOffset = 320;

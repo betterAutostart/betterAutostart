@@ -116,7 +116,7 @@ namespace betterAutostart
 
         private void btn_addNewExecutable_Click(object sender, EventArgs e)
         {
-            String filePath = "";
+            string filePath = "";
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -139,7 +139,7 @@ namespace betterAutostart
 
         private void txtBx_pName_TextChanged(object sender, EventArgs e)
         {
-            String text = txtBx_pName.Text;
+            string text = txtBx_pName.Text;
             if (text.Length <= 0 || text == null) return;
 
             char[] chars = text.ToCharArray();
@@ -175,7 +175,7 @@ namespace betterAutostart
 
         private void btn_saveChanges_Click(object sender, EventArgs e)
         {
-            String oldName = this.selectedProfile.Name;
+            string oldName = this.selectedProfile.Name;
             this.selectedProfile.Name = this.txtBx_pName.Text;
             this.selectedProfile.ExecuteAsAdmin = this.chkBx_execAsAdmin.Checked;
             this.selectedProfile.ShouldAutostart = this.chkBx_autostartWSys.Checked;

@@ -10,7 +10,7 @@ namespace betterAutostart.Common.ProfileClasses
 {
     public class Profile
     {
-        public String Name { get; set; } // Individual Name important for saveSystem
+        public string Name { get; set; } // Individual Name important for saveSystem
         public bool Active { get; set; }
         public bool ShouldAutostart { get; set; }
         public bool ExecuteAsAdmin { get; set; }
@@ -30,7 +30,7 @@ namespace betterAutostart.Common.ProfileClasses
             }
         }
 
-        public void AddNewExecutableApp(String path, String customName = "", bool startAsAdmin = false)
+        public void AddNewExecutableApp(string path, string customName = "", bool startAsAdmin = false)
         {
             this.ExecutableApps.Add(new ExecutableApp(path, customName, startAsAdmin));
         }

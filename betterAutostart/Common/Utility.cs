@@ -23,7 +23,7 @@ namespace betterAutostart
 
         public static bool DesignMode = false;
         
-        public static void ExploreFile(String filePath)
+        public static void ExploreFile(string filePath)
         {
             if (!File.Exists(filePath))
             {
@@ -49,7 +49,7 @@ namespace betterAutostart
             return isRunning;
         }
 
-        public static void OpenWebsite(String link)
+        public static void OpenWebsite(string link)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace betterAutostart
         }
 
 
-        public static void DebugLog(String msg)
+        public static void DebugLog(string msg)
         {
             if (DesignMode)
             {
@@ -93,11 +93,11 @@ namespace betterAutostart
             }
         }
 
-        public static bool IsExecutable(String filepath)
+        public static bool IsExecutable(string filepath)
         {
-            String[] splitPath = filepath.Split(new string[] { "\\" }, StringSplitOptions.None);
-            String[] splitFilePath = splitPath[splitPath.Length - 1].Split('.');
-            String fileEnding = splitFilePath[splitFilePath.Length - 1].ToLower();
+            string[] splitPath = filepath.Split(new string[] { "\\" }, StringSplitOptions.None);
+            string[] splitFilePath = splitPath[splitPath.Length - 1].Split('.');
+            string fileEnding = splitFilePath[splitFilePath.Length - 1].ToLower();
 
             if (fileEnding.Equals("exe") || fileEnding.Equals("bat") || fileEnding.Equals("cmd"))
             {

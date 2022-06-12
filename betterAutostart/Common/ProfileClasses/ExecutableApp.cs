@@ -13,8 +13,8 @@ namespace betterAutostart.Common.ProfileClasses
     [JsonObject]
     public class ExecutableApp
     {
-        public String Path { get; set; }
-        public String CustomName { get; set; }
+        public string Path { get; set; }
+        public string CustomName { get; set; }
         public bool ExecuteAsAdmin { get; set; }
         public bool AutoRestart { get; set; }
 
@@ -24,7 +24,7 @@ namespace betterAutostart.Common.ProfileClasses
         private bool killed = false;
         private int restarts = 0;
 
-        public ExecutableApp(String path, String customName, bool executeAsAdmin)
+        public ExecutableApp(string path, string customName, bool executeAsAdmin)
         {
             this.Path = path;
             this.CustomName = customName;
@@ -84,11 +84,11 @@ namespace betterAutostart.Common.ProfileClasses
             }
         }
 
-        public String GetExecutableCustomName()
+        public string GetExecutableCustomName()
         {
             if (this.CustomName == "")
             {
-                String[] splitPath = this.Path.Split(new string[] { "\\" }, StringSplitOptions.None);
+                string[] splitPath = this.Path.Split(new string[] { "\\" }, StringSplitOptions.None);
                 return splitPath[splitPath.Length - 1];
             }
             return this.CustomName;

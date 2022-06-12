@@ -6,12 +6,12 @@ namespace betterAutostart
 {
     public class ErrorLog
     {
-        private String errorDirectory = @"./log/";
-        private String[] errorLogs;
-        private String activeLogFilePath;
+        private string errorDirectory = @"./log/";
+        private string[] errorLogs;
+        private string activeLogFilePath;
 
-        private String fileNamePrefix = "clientLog_";
-        private String fileEndingPrefix = ".log";
+        private string fileNamePrefix = "clientLog_";
+        private string fileEndingPrefix = ".log";
 
         private int maxLogFileCount = 9;
 
@@ -49,27 +49,27 @@ namespace betterAutostart
 
         private void CreateNewLogFile()
         {
-            String filePath = this.errorDirectory + this.GenerateLogFileName();
+            string filePath = this.errorDirectory + this.GenerateLogFileName();
             File.CreateText(filePath).Close();
 
             this.activeLogFilePath = filePath;
         }
 
-        private String GenerateLogFileName()
+        private string GenerateLogFileName()
         {
-            String fileName = this.fileNamePrefix;
+            string fileName = this.fileNamePrefix;
             fileName += DateTime.Now.ToString("MM-dd-yyyy_HH-mm-ss");
             fileName += this.fileEndingPrefix;
 
             return fileName;
         }
 
-        private String GetLogTimestamp()
+        private string GetLogTimestamp()
         {
             return DateTime.Now.ToString("[HH:mm:ss] ");
         }
 
-        public void LogError(String err)
+        public void LogError(string err)
         {
             using (StreamWriter st = new StreamWriter(this.activeLogFilePath))
             {

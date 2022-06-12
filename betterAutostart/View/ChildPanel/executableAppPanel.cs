@@ -76,7 +76,7 @@ namespace betterAutostart
 
         private void txtBx_eName_TextChanged(object sender, EventArgs e)
         {
-            String text = txtBx_eName.Text;
+            string text = txtBx_eName.Text;
             if (text.Length <= 0 || text == null) return;
 
             char[] chars = text.ToCharArray();
@@ -105,7 +105,7 @@ namespace betterAutostart
 
         private void btn_editPath_Click(object sender, EventArgs e)
         {
-            String filePath = "";
+            string filePath = "";
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 if (this.lbl_path.Text == "")

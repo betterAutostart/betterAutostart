@@ -11,10 +11,10 @@ namespace betterAutostart
 {
     class SaveSystem
     {
-        private String[] allSaveFiles;
-        private String filePrefix = @"profileSaveFile_";
-        private String fileEndingPrefix = @".json";
-        private String saveDirectory = @"./saveFiles/";
+        private string[] allSaveFiles;
+        private string filePrefix = @"profileSaveFile_";
+        private string fileEndingPrefix = @".json";
+        private string saveDirectory = @"./saveFiles/";
 
         public SaveSystem()
         {
@@ -36,7 +36,7 @@ namespace betterAutostart
         {
             for(int i = 0; i < allSaveFiles.Count(); i++)
             {
-                String json = File.ReadAllText(allSaveFiles[i]);
+                string json = File.ReadAllText(allSaveFiles[i]);
                 Profile tempProfile = JsonConvert.DeserializeObject<Profile>(json);
                 Config.PHandler.AddExistingProfile(tempProfile);
             }
@@ -48,7 +48,7 @@ namespace betterAutostart
 
             for(int i = 0; i < allProfiles.Count(); i++)
             {
-                String filePath = this.saveDirectory + this.filePrefix + allProfiles[i].Name + this.fileEndingPrefix;
+                string filePath = this.saveDirectory + this.filePrefix + allProfiles[i].Name + this.fileEndingPrefix;
 
                 if (File.Exists(filePath))
                 {
@@ -66,15 +66,15 @@ namespace betterAutostart
                     allProfiles[i].ExecutableApps[0]
                 };
 
-                String json = JsonConvert.SerializeObject(model, Formatting.Indented);
+                string json = JsonConvert.SerializeObject(model, Formatting.Indented);
                 File.WriteAllText(filePath, json);
             }
         }
 
-        public void SaveProfile(Profile profile, String oldProfileName)
+        public void SaveProfile(Profile profile, string oldProfileName)
         {
-            String filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
-            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
+            string filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
+            string oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
 
             if (File.Exists(filePath))
             {
@@ -88,14 +88,14 @@ namespace betterAutostart
 
             File.CreateText(filePath).Close();
 
-            String json = JsonConvert.SerializeObject(profile, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(profile, Formatting.Indented);
             File.WriteAllText(filePath, json);       
         }
 
-        public void DeleteProfile(Profile profile, String oldProfileName)
+        public void DeleteProfile(Profile profile, string oldProfileName)
         {
-            String filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
-            String oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
+            string filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
+            string oldFilePath = this.saveDirectory + this.filePrefix + oldProfileName + this.fileEndingPrefix;
 
             if (File.Exists(filePath))
             {
