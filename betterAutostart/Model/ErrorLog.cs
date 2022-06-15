@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.IO;
 
-namespace betterAutostart
+namespace betterAutostart.Model
 {
     public class ErrorLog
     {

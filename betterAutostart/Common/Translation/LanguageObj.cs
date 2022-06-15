@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace betterAutostart
+namespace betterAutostart.Common.Translation
 {
     public class LanguageObj
     {

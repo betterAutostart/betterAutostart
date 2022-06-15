@@ -2,8 +2,10 @@
 using System.IO;
 using System.Diagnostics;
 using betterAutostart.Common.ProfileClasses;
+using betterAutostart.Common.Translation;
+using betterAutostart.Model;
 
-namespace betterAutostart
+namespace betterAutostart.Common
 {
     class Config
     {

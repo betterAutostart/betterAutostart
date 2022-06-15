@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
+using betterAutostart.Common;
 using betterAutostart.Common.ProfileClasses;
 
-namespace betterAutostart
+namespace betterAutostart.Model
 {
     class SaveSystem
     {

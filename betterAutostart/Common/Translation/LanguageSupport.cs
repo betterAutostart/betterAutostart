@@ -10,7 +10,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 
 
-namespace betterAutostart
+namespace betterAutostart.Common.Translation
 {
     class LanguageSupport
     {
