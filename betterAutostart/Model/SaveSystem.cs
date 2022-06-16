@@ -17,6 +17,9 @@ namespace betterAutostart.Model
         private string fileEndingPrefix = @".json";
         private string saveDirectory = @"./saveFiles/";
 
+        /// <summary>
+        /// Create a new instant of the SaveSystem
+        /// </summary>
         public SaveSystem()
         {
             if (Utility.DesignMode)
@@ -24,7 +27,7 @@ namespace betterAutostart.Model
                 this.saveDirectory = @"./../../saveFiles/";
             }
             
-            this.checkSaveFilePath();
+            this.CheckSaveFilePath();
             this.allSaveFiles = Directory.GetFiles(this.saveDirectory, 
                 this.filePrefix + 
                 "*" + 
@@ -33,6 +36,9 @@ namespace betterAutostart.Model
             this.LoadAllProfiles();
         }
 
+        /// <summary>
+        /// Reads in all the Profiles and adds them into the ProfileHandler
+        /// </summary>
         public void LoadAllProfiles()
         {
             for(int i = 0; i < allSaveFiles.Count(); i++)
@@ -43,6 +49,9 @@ namespace betterAutostart.Model
             }
         }
 
+        /// <summary>
+        /// Save all Autostart Profiles to .Json files
+        /// </summary>
         public void SaveAllProfiles()
         {
             List<Profile> allProfiles = Config.PHandler.GetProfiles();
@@ -72,6 +81,11 @@ namespace betterAutostart.Model
             }
         }
 
+        /// <summary>
+        /// Save a specific Autostart Profile
+        /// </summary>
+        /// <param name="profile">Autostart Profile which to save</param>
+        /// <param name="oldProfileName">The old Profile name, if the name got changed</param>
         public void SaveProfile(Profile profile, string oldProfileName)
         {
             string filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
@@ -93,6 +107,11 @@ namespace betterAutostart.Model
             File.WriteAllText(filePath, json);       
         }
 
+        /// <summary>
+        /// Deletes a specific Autostart Profile
+        /// </summary>
+        /// <param name="profile">Autostart Profile which to save</param>
+        /// <param name="oldProfileName">The old Profile name, if the name got changed</param>
         public void DeleteProfile(Profile profile, string oldProfileName)
         {
             string filePath = this.saveDirectory + this.filePrefix + profile.Name + this.fileEndingPrefix;
@@ -109,7 +128,10 @@ namespace betterAutostart.Model
             }
         }
 
-        private void checkSaveFilePath()
+        /// <summary>
+        /// Checks if the directory for the save files exists and creates a new one if needed
+        /// </summary>
+        private void CheckSaveFilePath()
         {
             if(!Directory.Exists(this.saveDirectory))
             {
