@@ -20,6 +20,9 @@ namespace betterAutostart.Common.Translation
         private static List<string> possibleLanguageNames = new List<string>();
 
 
+        /// <summary>
+        /// Reads and loads all language Files
+        /// </summary>
         public static void LoadAllLanguages()
         {
             if (Utility.DesignMode)
@@ -45,11 +48,20 @@ namespace betterAutostart.Common.Translation
 
         }
 
+        /// <summary>
+        /// Get a specific language by name
+        /// </summary>
+        /// <param name="name">Name of the language</param>
+        /// <returns>LanguageObj containing the found language, if none where found it returns null</returns>
         public static LanguageObj GetLanguageByName(string name) 
         {
             return possibleLanguages.Find(lang => lang.Name == name);
         }
 
+        /// <summary>
+        /// Get all names of loaded languages
+        /// </summary>
+        /// <returns>Names of loaded language</returns>
         public static List<string> GetPossibleLanguagesNames() 
         {
             return possibleLanguageNames;
