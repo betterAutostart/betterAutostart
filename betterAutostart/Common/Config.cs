@@ -13,9 +13,25 @@ namespace betterAutostart.Common
         /// The global currently selected language 
         /// </summary>
         public static LanguageObj ActiveLanguage;
+        
+        /// <summary>
+        /// Main Form displaying childForms
+        /// </summary>
         public static application ApplicationForm;
+        
+        /// <summary>
+        /// Global ProfileHandler
+        /// </summary>
         public static ProfileHandler PHandler;
+        
+        /// <summary>
+        /// Global SaveSystem
+        /// </summary>
         public static SaveSystem SaveSystem;
+        
+        /// <summary>
+        /// Global ErrorLog
+        /// </summary>
         public static ErrorLog ErrorLog;
 
         /*
@@ -26,7 +42,7 @@ namespace betterAutostart.Common
          */
 
         /// <summary>
-        /// 
+        /// Instantiate Global objects
         /// </summary>
         public static void InstantiateConfig()
         {
