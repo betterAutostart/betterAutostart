@@ -141,7 +141,7 @@ namespace betterAutostart
             this.btn_settingsBuyMeACoffe.Text = "Buy me a Coffe!";
             this.btn_settingsBuyMeACoffe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_settingsBuyMeACoffe.UseVisualStyleBackColor = false;
-            this.btn_settingsBuyMeACoffe.Click += new System.EventHandler(this.btn_settingsBuyMeACoffe_Click);
+            this.btn_settingsBuyMeACoffe.Click += new System.EventHandler(this.btn_settingsBuyMeACoffee_Click);
             // 
             // lbl_creditsDesignE
             // 

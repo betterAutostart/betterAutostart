@@ -9,8 +9,10 @@ namespace betterAutostart.Common
 {
     class Config
     {
+        /// <summary>
+        /// The global currently selected language 
+        /// </summary>
         public static LanguageObj ActiveLanguage;
-        public static LanguageSupport LangSupport;
         public static application ApplicationForm;
         public static ProfileHandler PHandler;
         public static SaveSystem SaveSystem;
@@ -23,11 +25,13 @@ namespace betterAutostart.Common
          * Microsoft Visual Studio Installer Projects (https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
          */
 
-        public static void ApplyConfig() 
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void InstantiateConfig()
         {
-            LangSupport = new LanguageSupport();
-            LangSupport.LoadAllLanguages();
-            ActiveLanguage = LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            LanguageSupport.LoadAllLanguages();
+            ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
             PHandler = new ProfileHandler();
             ErrorLog = new ErrorLog();
             SaveSystem = new SaveSystem();

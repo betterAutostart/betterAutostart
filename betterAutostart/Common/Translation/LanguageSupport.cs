@@ -14,26 +14,26 @@ namespace betterAutostart.Common.Translation
 {
     class LanguageSupport
     {
-        private string[] allLanguageJsonFiles;
-        private List<LanguageObj> languages = new List<LanguageObj>();
-        private List<LanguageObj> possibleLanguages = new List<LanguageObj>();
-        private List<string> possibleLanguageNames = new List<string>();
+        private static string[] allLanguageJsonFiles;
+        private static List<LanguageObj> languages = new List<LanguageObj>();
+        private static List<LanguageObj> possibleLanguages = new List<LanguageObj>();
+        private static List<string> possibleLanguageNames = new List<string>();
 
 
-        public void LoadAllLanguages()
+        public static void LoadAllLanguages()
         {
             if (Utility.DesignMode)
             {
-                this.allLanguageJsonFiles = Directory.GetFiles("./../../languagePackages");
+                allLanguageJsonFiles = Directory.GetFiles("./../../languagePackages");
             }
             else
             {
-                this.allLanguageJsonFiles = Directory.GetFiles("./languagePackages");
+                allLanguageJsonFiles = Directory.GetFiles("./languagePackages");
             }
             
-            for (int i = 0; i < this.allLanguageJsonFiles.Length; i++)
+            for (int i = 0; i < allLanguageJsonFiles.Length; i++)
             {
-                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(this.allLanguageJsonFiles[i]));
+                LanguageObj tempLang = JsonConvert.DeserializeObject<LanguageObj>(File.ReadAllText(allLanguageJsonFiles[i]));
 
                 languages.Add(tempLang);
                 if (tempLang.Active == 1) 
@@ -45,12 +45,12 @@ namespace betterAutostart.Common.Translation
 
         }
 
-        public LanguageObj GetLanguageByName(string name) 
+        public static LanguageObj GetLanguageByName(string name) 
         {
             return possibleLanguages.Find(lang => lang.Name == name);
         }
 
-        public List<string> GetPossibleLanguagesNames() 
+        public static List<string> GetPossibleLanguagesNames() 
         {
             return possibleLanguageNames;
         }

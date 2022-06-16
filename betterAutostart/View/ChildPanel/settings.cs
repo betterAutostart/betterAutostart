@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using betterAutostart.Common;
+using betterAutostart.Common.Translation;
 
 namespace betterAutostart
 {
@@ -17,7 +18,7 @@ namespace betterAutostart
         public settings()
         {
             InitializeComponent();
-            drpD_languages.Items.AddRange(Config.LangSupport.GetPossibleLanguagesNames().Cast<object>().ToArray());
+            drpD_languages.Items.AddRange(LanguageSupport.GetPossibleLanguagesNames().Cast<object>().ToArray());
             drpD_languages.SelectedItem = Config.ActiveLanguage.Name;
 
             this.UpdateTranslation();
@@ -45,14 +46,14 @@ namespace betterAutostart
         {
             if (drpD_languages.SelectedItem == null) return;
             Properties.Settings.Default["SelectedLanguage"] = drpD_languages.SelectedItem.ToString();
-            Config.ActiveLanguage = Config.LangSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            Config.ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
             Config.ApplicationForm.UpdateTranslation();
             this.UpdateTranslation();
 
             Properties.Settings.Default.Save();
         }
 
-        private void btn_settingsBuyMeACoffe_Click(object sender, EventArgs e)
+        private void btn_settingsBuyMeACoffee_Click(object sender, EventArgs e)
         {
             Utility.OpenWebsite("https://www.buymeacoffee.com/erijl");
         }
