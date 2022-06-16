@@ -17,7 +17,7 @@ namespace betterAutostart
             Utility.DesignMode = true;
             #endif
 
-            Config.ApplyConfig();
+            Config.InstantiateConfig();
             Config.ApplicationForm = this;
             InitializeComponent();
             this.Text = "BetterAutostart";
