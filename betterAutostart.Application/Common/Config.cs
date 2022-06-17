@@ -47,7 +47,7 @@ namespace betterAutostart.Application.Common
         public static void InstantiateConfig()
         {
             LanguageSupport.LoadAllLanguages();
-            ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default.SelectedLanguage);
             PHandler = new ProfileHandler();
             ErrorLog = new ErrorLog();
             SaveSystem = new SaveSystem();

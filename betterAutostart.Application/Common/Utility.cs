@@ -108,12 +108,12 @@ namespace betterAutostart.Application
         /// </summary>
         public static void AddAutostartRegistry()
         {
-            if (Properties.Settings.Default["SelectedLanguage"].ToString() != null && Properties.Settings.Default["SelectedLanguage"].ToString().Equals("False"))
+            if (!Properties.Settings.Default.AddToAutostartRegistry)
             {
-                Properties.Settings.Default["SelectedLanguage"] = "True";
+                Properties.Settings.Default["AddToAutostartRegistry"] = true;
 
                 RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                reg.SetValue("betterAutostart.Application", System.Windows.Forms.Application.ExecutablePath.ToString());
+                reg.SetValue("betterAutostart", System.Windows.Forms.Application.ExecutablePath.ToString());
 
                 Properties.Settings.Default.Save();
             }

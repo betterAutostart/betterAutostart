@@ -46,7 +46,7 @@ namespace betterAutostart.Application
         {
             if (drpD_languages.SelectedItem == null) return;
             Properties.Settings.Default["SelectedLanguage"] = drpD_languages.SelectedItem.ToString();
-            Config.ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default["SelectedLanguage"].ToString());
+            Config.ActiveLanguage = LanguageSupport.GetLanguageByName(Properties.Settings.Default.SelectedLanguage);
             Config.ApplicationForm.UpdateTranslation();
             this.UpdateTranslation();
 
