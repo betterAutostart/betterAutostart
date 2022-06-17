@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "betterAutostart", "betterAutostart\betterAutostart.csproj", "{030CD072-4DF7-4E8B-BCF5-515A04572574}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "betterAutostart.Application", "betterAutostart.Application\betterAutostart.Application.csproj", "{030CD072-4DF7-4E8B-BCF5-515A04572574}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "betterAutostartSetup", "betterAutostartSetup\betterAutostartSetup.vdproj", "{FE94F94B-4D94-4D6F-9AC4-910883E4E00E}"
 EndProject
