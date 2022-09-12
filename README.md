@@ -1,6 +1,7 @@
 # betterAutostart
 Better Autostart is an open-source tool to help you stay productive. Instead of losing time setting up the work environment, let Better Autostart do it for you!
 
+### PLEASE NOTE: I am currently developing a new version of betterautostart using Flutter & Dart to have a more appealing UI and better UX.
 
 ## Download
 You can download the project on the [website](betterautostart.com) or clone it from the directory and [build it locally](https://github.com/Erijl/betterAutostart/wiki/How-to-Build-the-Project). More Information can be found within [the wiki](https://github.com/Erijl/betterAutostart/wiki/How-to-download-Better-Autostart).
