@@ -1,10 +1,10 @@
-# betterAutostart
+# BetterAutostart
 Better Autostart is an open-source tool to help you stay productive. Instead of losing time setting up the work environment, let Better Autostart do it for you!
 
-### PLEASE NOTE: I am currently developing a new version of betterautostart using Flutter & Dart to have a more appealing UI and better UX.
+### IMPORTANT PLEASE NOTE: This project is DEPRECATED, and not being further developer nor supported, use / work with at your own risk. (There might be a BetterAutostart V2 coming start next year)
 
 ## Download
-You can download the project on the [website](betterautostart.com) or clone it from the directory and [build it locally](https://github.com/Erijl/betterAutostart/wiki/How-to-Build-the-Project). More Information can be found within [the wiki](https://github.com/Erijl/betterAutostart/wiki/How-to-download-Better-Autostart).
+You can ~download the project on the [website](betterautostart.com) or~ clone it from the directory and [build it locally](https://github.com/Erijl/betterAutostart/wiki/How-to-Build-the-Project). More Information can be found within [the wiki](https://github.com/Erijl/betterAutostart/wiki/How-to-download-Better-Autostart).
 
 
 ## How to Contribute
@@ -28,4 +28,4 @@ All Languages can be found in betterAutostart/languagePackages. More Information
 > <img src="https://avatars.githubusercontent.com/erijl"   height="50px" title="Erijl"/> | [`@erijl`](https://github.com/erijl)
 
 ## License
-This repository is licensed under [MIT](https://github.com/Erijl/betterAutostart/blob/master/LICENSE) Copyright (c) 2021 Better Autostart
+This repository is licensed under [MIT](https://github.com/Erijl/betterAutostart/blob/master/LICENSE) Copyright (c) 2021-2024 Better Autostart
